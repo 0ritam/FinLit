@@ -39,7 +39,7 @@ const Hero = () => {
           <button className="button-primary flex items-center gap-2" onClick={handleStarted}>
             Get Started Now
           </button>
-          <button className="px-6 py-3 border border-neutral-300 rounded-lg hover:bg-neutral-200/50 transition-colors">
+          <button className="px-6 py-3 border border-n-3 rounded-lg bg-color-4 hover:bg-color-3 transition-colors">
             Learn More
           </button>
         </motion.div>

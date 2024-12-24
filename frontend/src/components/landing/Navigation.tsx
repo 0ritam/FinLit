@@ -8,10 +8,10 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50">
-      <div className="glass-panel rounded-full px-6 py-4 flex items-center justify-between shadow-lg backdrop-blur-md">
+      <div className="glass-panel rounded-full px-6 py-4 flex items-center justify-between shadow-lg backdrop-blur-md bg-color-1">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-full"></div>
-          <span className="text-xl font-semibold">Lovely</span>
+          <div className="w-8 h-8 bg-n-8 rounded-full"></div>
+          <span className="text-xl font-semibold">Finlit</span>
         </Link>
         
       

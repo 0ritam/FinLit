@@ -6,7 +6,7 @@ import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-neutral-100">
+    <div className="min-h-screen bg-n-8">
       <Navigation />
       <Hero />
       <TrustedBy />
