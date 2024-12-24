@@ -11,6 +11,7 @@ import Investing from "./pages/Investing";
 import Saving from "./pages/Saving";
 import Dashboard from "./pages/Dashboard";
 
+
 const queryClient = new QueryClient();
 
 const App = () => (

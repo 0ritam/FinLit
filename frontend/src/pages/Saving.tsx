@@ -5,62 +5,98 @@ import { Link } from "react-router-dom";
 
 const chapters = [
   {
-    title: "Saving Strategies",
-    description: "Learn effective strategies for saving money",
+    title: "Saving Fundamentals",
+    description: "Learn the basic principles of effective saving",
+    path: "/saving/basics"
+  },
+  {
+    title: "Smart Saving Strategies",
+    description: "Discover proven techniques to maximize your savings",
     path: "/saving/strategies"
   },
   {
     title: "Emergency Fund",
-    description: "Build and maintain your emergency savings",
+    description: "Build and maintain your financial safety net",
     path: "/saving/emergency-fund"
   },
   {
-    title: "Long-term Savings",
-    description: "Plan for your future with long-term saving goals",
-    path: "/saving/long-term"
+    title: "High-Yield Savings",
+    description: "Explore options to earn more from your savings",
+    path: "/saving/high-yield"
+  },
+  {
+    title: "Automated Saving",
+    description: "Set up systems for consistent and effortless saving",
+    path: "/saving/automation"
   }
 ];
+
+const customStyles = {
+  container: "container-padding py-12 md:py-24",
+  banner: "bg-primary/10 backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8",
+  bannerHeader: "text-center mb-12",
+  bannerTitle: "heading-xl mb-4 text-primary",
+  bannerSubtitle: "text-xl text-neutral-600 max-w-2xl mx-auto",
+  chaptersContainer: "max-w-3xl mx-auto",
+  chaptersList: "relative",
+  verticalLine: "absolute left-4 top-0 bottom-0 w-0.5 bg-primary/20",
+  chapterItem: "flex items-center gap-8 mb-8 group",
+  chapterMarker: "relative z-10 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center",
+  chapterCross: "text-primary font-bold text-lg",
+  chapterContent: "flex-1 bg-white/80 p-6 rounded-xl shadow-sm border border-neutral-200 hover:shadow-lg transition-all",
+  chapterTitle: "text-xl font-semibold mb-2 text-primary",
+  chapterDescription: "text-neutral-600"
+};
 
 const Saving = () => {
   return (
     <div className="min-h-screen bg-neutral-100">
       <Navigation />
-      <div className="container-padding py-24">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <motion.h1 
-            className="heading-xl mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Smart Saving
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-neutral-600"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Master the art of saving money and securing your future
-          </motion.p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {chapters.map((chapter, index) => (
-            <motion.div
-              key={chapter.title}
+      <div className={customStyles.container}>
+        <div className={customStyles.banner}>
+          <div className={customStyles.bannerHeader}>
+            <motion.h1 
+              className={customStyles.bannerTitle}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
+              transition={{ duration: 0.5 }}
             >
-              <Link to={chapter.path} className="block">
-                <div className="glass-panel p-6 rounded-xl hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-semibold mb-2">{chapter.title}</h3>
-                  <p className="text-neutral-600">{chapter.description}</p>
+              Master Saving
+            </motion.h1>
+            <motion.p 
+              className={customStyles.bannerSubtitle}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              Build a strong financial foundation through smart saving habits
+            </motion.p>
+          </div>
+        </div>
+
+        <div className={customStyles.chaptersContainer}>
+          <div className={customStyles.chaptersList}>
+            <div className={customStyles.verticalLine} />
+            {chapters.map((chapter, index) => (
+              <motion.div
+                key={chapter.title}
+                className={customStyles.chapterItem}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+              >
+                <div className={customStyles.chapterMarker}>
+                  <span className={customStyles.chapterCross}>×</span>
                 </div>
-              </Link>
-            </motion.div>
-          ))}
+                <Link to={chapter.path} className="flex-1">
+                  <div className={customStyles.chapterContent}>
+                    <h3 className={customStyles.chapterTitle}>{chapter.title}</h3>
+                    <p className={customStyles.chapterDescription}>{chapter.description}</p>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />
