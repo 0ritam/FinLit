@@ -1,4 +1,4 @@
-import Navigation from "@/components/landing/Navigation";
+import Navigation from "@/components/landing/Navigation1";
 import Footer from "@/components/landing/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";

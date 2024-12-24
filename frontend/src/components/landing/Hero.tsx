@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
+import dashboard from '../../pages/Dashboard'
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+
+  const navigate = useNavigate();
+
+  const handleStarted = () => {
+    navigate('dashboard');
+  }
+
   return (
     <header className="container-padding py-12">
       {/* Hero content */}
@@ -27,7 +36,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <button className="button-primary flex items-center gap-2">
+          <button className="button-primary flex items-center gap-2" onClick={handleStarted}>
             Get Started Now
           </button>
           <button className="px-6 py-3 border border-neutral-300 rounded-lg hover:bg-neutral-200/50 transition-colors">
