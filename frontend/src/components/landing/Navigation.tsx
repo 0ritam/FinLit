@@ -14,12 +14,8 @@ const Navigation = () => {
           <span className="text-xl font-semibold">Lovely</span>
         </Link>
         
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          <Link to="/budgeting" className="text-neutral-600 hover:text-primary transition-colors font-medium">Budgeting</Link>
-          <Link to="/investing" className="text-neutral-600 hover:text-primary transition-colors font-medium">Investing</Link>
-          <Link to="/saving" className="text-neutral-600 hover:text-primary transition-colors font-medium">Saving</Link>
-        </div>
+      
+      
         
         <div className="hidden md:flex items-center gap-4">
           <Link to="/login" className="px-4 py-2 text-primary hover:text-primary/80 transition-colors font-medium">
@@ -48,10 +44,7 @@ const Navigation = () => {
           transition={{ duration: 0.2 }}
         >
           <div className="flex flex-col gap-4">
-            <Link to="/budgeting" className="text-neutral-600 hover:text-primary transition-colors font-medium px-4 py-2 hover:bg-neutral-200/50 rounded-lg">Budgeting</Link>
-            <Link to="/investing" className="text-neutral-600 hover:text-primary transition-colors font-medium px-4 py-2 hover:bg-neutral-200/50 rounded-lg">Investing</Link>
-            <Link to="/saving" className="text-neutral-600 hover:text-primary transition-colors font-medium px-4 py-2 hover:bg-neutral-200/50 rounded-lg">Saving</Link>
-            <hr className="border-neutral-200" />
+            
             <Link to="/login" className="text-primary hover:text-primary/80 transition-colors font-medium px-4 py-2 hover:bg-neutral-200/50 rounded-lg text-left">
               Log in
             </Link>
