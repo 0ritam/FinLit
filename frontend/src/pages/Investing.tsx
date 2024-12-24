@@ -16,7 +16,7 @@ const chapters = [
   },
   {
     title: "Risk Management",
-    description: "Master the strategies for managing investment risks",
+    description: "Master the strategies for managing investment conditions and risks",
     path: "/investing/risk"
   }
 ];

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const chapters = [
   {
     title: "Basics of Budgeting",
-    description: "Learn the fundamental principles of creating and maintaining a budget",
+    description: "Learn the fundamentals of maintaining a budget",
     path: "/budgeting/basics"
   },
   {
