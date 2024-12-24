@@ -2,6 +2,11 @@ import Navigation from "@/components/landing/Navigation1";
 import Footer from "@/components/landing/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ChapterLayout from '@/components/learning/ChapterLayout';
+import ChapterContent from '@/components/learning/ChapterContent';
+import ChapterQuiz from '@/components/learning/ChapterQuiz';
+import { savingBasicsContent, savingBasicsQuiz, savingPracticeQuiz } from "@/data/saving/basics";
+import { Routes, Route } from "react-router-dom";
 
 const chapters = [
   {
@@ -50,57 +55,66 @@ const customStyles = {
 
 const Saving = () => {
   return (
-    <div className="min-h-screen bg-neutral-100">
-      <Navigation />
-      <div className={customStyles.container}>
-        <div className={customStyles.banner}>
-          <div className={customStyles.bannerHeader}>
-            <motion.h1 
-              className={customStyles.bannerTitle}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Master Saving
-            </motion.h1>
-            <motion.p 
-              className={customStyles.bannerSubtitle}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Build a strong financial foundation through smart saving habits
-            </motion.p>
-          </div>
-        </div>
+    <Routes>
+      <Route index element={
+        <div className="min-h-screen bg-neutral-100">
+          <Navigation />
+          <div className={customStyles.container}>
+            <div className={customStyles.banner}>
+              <div className={customStyles.bannerHeader}>
+                <motion.h1 
+                  className={customStyles.bannerTitle}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  Master Saving
+                </motion.h1>
+                <motion.p 
+                  className={customStyles.bannerSubtitle}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  Build a strong financial foundation through smart saving habits
+                </motion.p>
+              </div>
+            </div>
 
-        <div className={customStyles.chaptersContainer}>
-          <div className={customStyles.chaptersList}>
-            <div className={customStyles.verticalLine} />
-            {chapters.map((chapter, index) => (
-              <motion.div
-                key={chapter.title}
-                className={customStyles.chapterItem}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-              >
-                <div className={customStyles.chapterMarker}>
-                  <span className={customStyles.chapterCross}>×</span>
-                </div>
-                <Link to={chapter.path} className="flex-1">
-                  <div className={customStyles.chapterContent}>
-                    <h3 className={customStyles.chapterTitle}>{chapter.title}</h3>
-                    <p className={customStyles.chapterDescription}>{chapter.description}</p>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+            <div className={customStyles.chaptersContainer}>
+              <div className={customStyles.chaptersList}>
+                <div className={customStyles.verticalLine} />
+                {chapters.map((chapter, index) => (
+                  <motion.div
+                    key={chapter.title}
+                    className={customStyles.chapterItem}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 * index }}
+                  >
+                    <div className={customStyles.chapterMarker}>
+                      <span className={customStyles.chapterCross}>×</span>
+                    </div>
+                    <Link to={chapter.path} className="flex-1">
+                      <div className={customStyles.chapterContent}>
+                        <h3 className={customStyles.chapterTitle}>{chapter.title}</h3>
+                        <p className={customStyles.chapterDescription}>{chapter.description}</p>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
+          <Footer />
         </div>
-      </div>
-      <Footer />
-    </div>
+      } />
+      <Route path="basics" element={<ChapterLayout chapterTitle="Saving Basics" />}>
+        <Route path="content" element={<ChapterContent title="Saving Basics" content={savingBasicsContent} />} />
+        <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={savingBasicsQuiz} isBasic={true} />} />
+        <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={savingPracticeQuiz} isBasic={false} />} />
+      </Route>
+    </Routes>
   );
 };
 

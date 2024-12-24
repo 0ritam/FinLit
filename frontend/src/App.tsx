@@ -24,9 +24,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/budgeting" element={<Budgeting />} />
-          <Route path="/investing" element={<Investing />} />
-          <Route path="/saving" element={<Saving />} />
+          <Route path="/budgeting/*" element={<Budgeting />} />
+          <Route path="/investing/*" element={<Investing />} />
+          <Route path="/saving/*" element={<Saving />} />
           <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
       </BrowserRouter>
