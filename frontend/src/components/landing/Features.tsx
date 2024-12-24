@@ -4,14 +4,14 @@ import { Card } from "@/components/ui/card";
 const Features = () => {
   const features = [
     {
-      title: "Intelligent Task Management",
-      description: "Streamline your tasks and collaborate seamlessly with our cutting-edge SaaS startup platform.",
-      points: ["Smart Task Assignment", "Real-time Collaboration", "Data Security & Privacy"]
+      title: "Financial Planning",
+      description: "Master your finances with our comprehensive financial planning tools and resources.",
+      points: ["Budget Tracking", "Expense Management", "Goal Setting"]
     },
     {
-      title: "Advanced Analytics",
-      description: "Harness the power of AI-driven analytics to optimize your campaigns and understand your audience better.",
-      points: ["Smart Audience Segmentation", "Predictive Performance", "Real-time Visualization"]
+      title: "Investment Insights",
+      description: "Gain valuable insights into investment opportunities and strategies to grow your wealth.",
+      points: ["Market Analysis", "Portfolio Management", "Risk Assessment"]
     }
   ];
 
