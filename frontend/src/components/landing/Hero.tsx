@@ -11,7 +11,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Build Your Next SaaS Platform
+          Learn with FINLIT
         </motion.h1>
         <motion.p 
           className="text-xl text-neutral-600 mb-8"
@@ -19,7 +19,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          A powerful and flexible platform designed for modern businesses and startups.
+          A powerful and flexible platform designed for Financial knowledge and Habits.
         </motion.p>
         <motion.div 
           className="flex flex-wrap justify-center gap-4"
