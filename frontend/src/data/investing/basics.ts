@@ -1,27 +1,62 @@
 export const investingBasicsContent = {
   sections: [
     {
-      heading: "Understanding Investment Basics",
+      heading: "What is Investing?",
       paragraphs: [
-        "Investing is the process of allocating money with the expectation of generating future returns...",
-        "Different investment vehicles offer varying levels of risk and potential returns..."
+        "Investing is the act of allocating resources, usually money, with the expectation of generating an income or profit...",
+        "Investing can help you grow your wealth over time and achieve your financial goals..."
       ]
-    }
+    },
+    {
+      heading: "Types of Investments",
+      paragraphs: [
+        "There are various types of investments, including stocks, bonds, mutual funds, real estate, and more...",
+        "Each type of investment has its own risks and rewards..."
+      ]
+    },
+    {
+      heading: "How to Start Investing?",
+      paragraphs: [
+        "To start investing, you need to set clear financial goals, understand your risk tolerance, and choose the right investment options...",
+        "It's also important to diversify your investments to manage risk..."
+      ]
+    },
+    // More sections...
   ]
 };
 
 export const investingBasicsQuiz = [
   {
-    question: "What is diversification?",
+    question: "What is the primary goal of investing?",
     options: [
-      "Investing all money in one stock",
-      "Spreading investments across different assets",
-      "Only investing in bonds",
-      "Keeping all money in savings"
+      "To save money",
+      "To generate an income or profit",
+      "To spend money",
+      "To track expenses"
     ],
-    correctAnswer: 1,
-    explanation: "Diversification involves spreading investments across different assets to reduce risk..."
-  }
+    answer: "To generate an income or profit"
+  },
+  {
+    question: "What are some types of investments?",
+    options: [
+      "Stocks",
+      "Bonds",
+      "Mutual funds",
+      "All of the above"
+    ],
+    answer: "All of the above"
+  },
+  {
+    question: "What is important to consider before starting to invest?",
+    options: [
+      "Financial goals",
+      "Risk tolerance",
+      "Investment options",
+      "All of the above"
+    ],
+    answer: "All of the above"
+  },
+  // More questions...
 ];
 
 export const investingPracticeQuiz = [
@@ -31,4 +66,4 @@ export const investingPracticeQuiz = [
     correctAnswer: 0,
     explanation: "$1000 × 1.07 = $1,070. This represents a 7% increase on the initial investment."
   }
-]; 
+];
