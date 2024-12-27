@@ -10,7 +10,7 @@ import Budgeting from "./pages/Budgeting";
 import Investing from "./pages/Investing";
 import Saving from "./pages/Saving";
 import Dashboard from "./pages/Dashboard";
-
+import Fraud from "./pages/FraudPrevention"
 
 const queryClient = new QueryClient();
 
@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/investing/*" element={<Investing />} />
           <Route path="/saving/*" element={<Saving />} />
           <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/fraud-prevention" element={<Fraud/>} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
