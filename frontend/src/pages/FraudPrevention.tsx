@@ -102,8 +102,8 @@ const Fraud = () => {
       } />
       <Route path="basics" element={<ChapterLayout chapterTitle="Investment Basics" />}>
         <Route path="content" element={<ChapterContent title="Investment Basics" content={investingBasicsContent} />} />
-        <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={investingBasicsQuiz} isBasic={true} />} />
-        <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={investingPracticeQuiz} isBasic={false} />} />
+        {/* <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz"  isBasic={true} />} /> */}
+        {/* <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={investingPracticeQuiz} isBasic={false} />} /> */}
       </Route>
     </Routes>
   );
