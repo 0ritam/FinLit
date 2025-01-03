@@ -9,7 +9,7 @@ const Index = () => {
     <div className="min-h-screen bg-n-8">
       <Navigation />
       <Hero />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <Features />
       <Footer />
     </div>

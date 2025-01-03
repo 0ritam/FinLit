@@ -27,7 +27,7 @@ const Features = () => {
             TWO-COL FEATURES
           </span>
           <h2 className="heading-lg mt-6">Supercharge Your Knowledge</h2>
-          <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+          <p className="text-n-1 mt-4 max-w-2xl mx-auto">
             Unlock your team's true potential with our state-of-the-art Education platform.
           </p>
         </div>

@@ -23,7 +23,7 @@ const Hero = () => {
           Learn with FINLIT
         </motion.h1>
         <motion.p 
-          className="text-xl text-neutral-600 mb-8"
+          className="text-xl text-n-1 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
