@@ -16,12 +16,12 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-4">
-      <div className="max-w-md w-full glass-panel p-8 rounded-2xl">
+    <div className="min-h-screen bg-n-1  flex items-center justify-center p-4">
+      <div className="max-w-md  bg-n-1 w-full glass-panel p-8 rounded-2xl">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-6">
-            <div className="w-8 h-8 bg-primary rounded-full"></div>
-            <span className="text-xl font-semibold">Lovely</span>
+            <div className="w-8 h-8 bg-n-1 rounded-full"></div>
+            <span className="text-xl font-semibold">Finlit</span>
           </div>
           <h1 className="text-2xl font-bold mb-2">Welcome back</h1>
           <p className="text-neutral-600">Please enter your details to sign in</p>

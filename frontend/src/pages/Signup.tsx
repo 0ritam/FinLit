@@ -18,11 +18,11 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-4">
-      <div className="max-w-md w-full glass-panel p-8 rounded-2xl">
+      <div className="max-w-md w-full bg-n-1 glass-panel p-8 rounded-2xl">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-6">
             <div className="w-8 h-8 bg-primary rounded-full"></div>
-            <span className="text-xl font-semibold">Lovely</span>
+            <span className="text-xl font-semibold">Finlit</span>
           </div>
           <h1 className="text-2xl font-bold mb-2">Create an account</h1>
           <p className="text-neutral-600">Please enter your details to sign up</p>
