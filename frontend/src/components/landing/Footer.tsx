@@ -6,7 +6,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 bg-color-2 rounded-full"></div>
-              <span className="text-xl font-semibold">Lovely</span>
+              <span className="text-xl text-n-1 font-semibold">Finlit</span>
             </div>
             <p className="text-n-1 text-sm">
               Modern Learning Platform for Youth

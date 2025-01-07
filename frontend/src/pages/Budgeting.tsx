@@ -63,7 +63,7 @@ const Budgeting = () => {
         <Route
           index
           element={
-            <div className="min-h-screen bg-n-1">
+            <div className="min-h-screen bg-neutral-100">
               <Navigation />
               <div className={customStyles.container}>
                 <div className={customStyles.banner}>

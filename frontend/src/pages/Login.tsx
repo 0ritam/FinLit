@@ -27,7 +27,7 @@ const Login = () => {
           <p className="text-neutral-600">Please enter your details to sign in</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-n-1">
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
               Email
