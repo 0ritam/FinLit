@@ -1,18 +1,29 @@
 const TrustedBy = () => {
-  const companies = [
-    { name: "Stripe", className: "w-24" },
-    { name: "HubSpot", className: "w-28" },
-    { name: "Intercom", className: "w-28" },
-    { name: "Asana", className: "w-24" }
+  const features = [
+    {
+      title: "Learn",
+      description: "4 modules of Financial Knowledge -Budegting, Investing, Saving, Fraud Prevention; each including 5 chapters of various subjects.",
+      icon: "📘",
+    },
+    {
+      title: "Practice",
+      description: "Practice with our hundreds of multiple-choice and scenario based questions covering every topic needed.",
+      icon: "⤴️",
+    },
   ];
 
   return (
-    <section className="py-24 bg-neutral-200/50">
+    <section className="py-24 mt-10 bg-n-8">
       <div className="container-padding">
-        <p className="text-center text-neutral-600 mb-12">Trusted by popular startups you know</p>
-        <div className="flex flex-wrap justify-center items-center gap-12">
-          {companies.map((company) => (
-            <div key={company.name} className={`${company.className} h-8 bg-neutral-400/20 rounded-lg`} />
+        <div className="flex flex-wrap justify-center items-start gap-12">
+          {features.map((feature, index) => (
+            <div key={index} className="flex flex-col items-center text-center max-w-sm">
+              <div className="w-12 h-12 flex items-center justify-center bg-color-4 text-n-1 rounded-lg mb-4 text-2xl">
+                {feature.icon}
+              </div>
+              <h3 className="text-lg text-n-1 font-semibold mb-2">{feature.title}</h3>
+              <p className="text-n-3">{feature.description}</p>
+            </div>
           ))}
         </div>
       </div>

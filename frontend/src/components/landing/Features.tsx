@@ -2,6 +2,8 @@ import { Check } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import service1 from "@/assets/service-3.png";
 import service2 from "@/assets/service-2.png";
+import f1 from "@/assets/f1.png";
+import f2 from "@/assets/f2.png";
 
 const Features = () => {
   const features = [
@@ -9,13 +11,13 @@ const Features = () => {
       title: "Financial Planning",
       description: "Master your finances with our comprehensive financial planning tools and resources.",
       points: ["Budget Tracking", "Expense Management", "Goal Setting"],
-      image: service1,
+      image: f1,
     },
     {
       title: "Investment Insights",
       description: "Gain valuable insights into investment opportunities and strategies to grow your wealth.",
       points: ["Market Analysis", "Portfolio Management", "Risk Assessment"],
-      image: service2,
+      image: f2,
     },
   ];
 
@@ -24,11 +26,11 @@ const Features = () => {
       <div className="container-padding">
         <div className="text-center mb-16">
           <span className="bg-color-3 text-accent-purple px-4 py-1.5 rounded-full text-sm font-medium">
-            TWO-COL FEATURES
+             FEATURES
           </span>
           <h2 className="heading-lg mt-6">Supercharge Your Knowledge</h2>
-          <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
-            Unlock your team's true potential with our state-of-the-art Education platform.
+          <p className="text-n-1 mt-4 max-w-2xl mx-auto">
+            Unlock your true potential with our Education platform.
           </p>
         </div>
 
@@ -53,10 +55,10 @@ const Features = () => {
                 ))}
               </ul>
               <div className="mt-8 flex gap-4">
-                <button className="button-primary">Start 14-day trial</button>
-                <button className="px-6 py-3 text-color-6 hover:text-primary transition-colors">
+                {/* <button className="button-primary">Start 14-day trial</button> */}
+                {/* <button className="px-6 py-3 text-color-6 hover:text-primary transition-colors">
                   Contact Sales
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="flex-1">

@@ -28,7 +28,7 @@ const Signup = () => {
           <p className="text-neutral-600">Please enter your details to sign up</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-n-1">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">
               Full Name

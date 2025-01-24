@@ -29,17 +29,17 @@ const chapters = [
 
 const customStyles = {
   container: "container-padding py-12 md:py-24",
-  banner: "bg-primary/10 backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8",
+  banner: "bg-color-2 backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8",
   bannerHeader: "text-center mb-12",
   bannerTitle: "heading-xl mb-4 text-primary",
   bannerSubtitle: "text-xl text-neutral-600 max-w-2xl mx-auto",
   chaptersContainer: "max-w-3xl mx-auto",
   chaptersList: "relative",
-  verticalLine: "absolute left-4 top-0 bottom-0 w-0.5 bg-primary/20",
+  verticalLine: "absolute left-4 top-0 bottom-0 w-0.5 bg-n-8",
   chapterItem: "flex items-center gap-8 mb-8 group",
   chapterMarker: "relative z-10 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center",
-  chapterCross: "text-primary font-bold text-lg",
-  chapterContent: "flex-1 bg-white/80 p-6 rounded-xl shadow-sm border border-neutral-200 hover:shadow-lg transition-all",
+  chapterCross: "text-n-8 font-bold text-lg",
+  chapterContent: "flex-1 bg-color-2 p-6 rounded-xl shadow-sm border border-neutral-200 hover:shadow-lg transition-all",
   chapterTitle: "text-xl font-semibold mb-2 text-primary",
   chapterDescription: "text-neutral-600"
 };
