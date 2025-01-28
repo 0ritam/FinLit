@@ -11,12 +11,6 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [fullname, setFullName] = useState("");
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   // TODO: Implement actual signup logic
-  //   toast.success("Signup functionality will be implemented soon!");
-  // };
-
   const RegisterUser = async (e: React.FormEvent) => {
     e.preventDefault();
     const fetchData = await fetch(`${baseBackendUrl}/user/signup`, {

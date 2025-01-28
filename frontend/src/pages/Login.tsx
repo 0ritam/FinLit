@@ -10,12 +10,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   // TODO: Implement actual login logic
-  //   toast.success("Login functionality will be implemented soon!");
-  // };
-
   const LoginUser = async (e: React.FormEvent) => {
     e.preventDefault(); //prevent page relaod
     const response = await fetch(`${baseBackendUrl}/user/signin`, {
