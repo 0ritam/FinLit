@@ -3,18 +3,45 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { baseBackendUrl } from "../../shared/url";
 
 const Signup = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [fullname, setFullName] = useState("");
 
   // const handleSubmit = (e: React.FormEvent) => {
   //   e.preventDefault();
   //   // TODO: Implement actual signup logic
   //   toast.success("Signup functionality will be implemented soon!");
   // };
+
+  const RegisterUser = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const fetchData = await fetch(`${baseBackendUrl}/user/signup`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',  //conetent type header
+      },
+      body:JSON.stringify({
+        fullname,
+        email,
+        password
+      }),
+    })
+
+    const data = await fetchData.json();
+    if(data.token){
+      localStorage.setItem('token', data.token)
+      navigate('/dashboard')
+
+    }else{
+      alert(data.msg)
+    }
+    console.log(data);
+  };
+
 
   return (
     <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-4">
@@ -28,7 +55,7 @@ const Signup = () => {
           <p className="text-neutral-600">Please enter your details to sign up</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4 text-n-1">
+        <form onSubmit={(e) => RegisterUser(e)} className="space-y-4 text-n-1">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">
               Full Name
@@ -36,8 +63,8 @@ const Signup = () => {
             <Input
               id="name"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={fullname}
+              onChange={(e) => setFullName(e.target.value)}
               placeholder="Enter your full name"
               required
             />

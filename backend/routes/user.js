@@ -66,7 +66,7 @@ UserRoute.post("/signup", async (req, res)=>{
 })
 
 const signinZod = zod.object({
-    fullname: zod.string().min(3),
+    email: zod.string(),
     password: zod.string().min(3)
 })
 
@@ -79,13 +79,13 @@ UserRoute.post("/signin", async (req, res)=>{
         return;
     }
     const FindUser = await User.findOne({
-        fullname: req.body.fullname,
+        email: req.body.email,
         password: req.body.password
     })
 
     if(FindUser != null) {
-        const fullname = FindUser.fullname
-        const token = jwt.sign({fullname: fullname}, JWT_SECRET)
+        const email = FindUser.email
+        const token = jwt.sign({email:email}, JWT_SECRET)
         res.json({
             msg: "Succesfully logged in",
             token: token

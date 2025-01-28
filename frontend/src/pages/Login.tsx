@@ -3,17 +3,42 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { baseBackendUrl } from "../../shared/url";
 
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement actual login logic
-    toast.success("Login functionality will be implemented soon!");
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // TODO: Implement actual login logic
+  //   toast.success("Login functionality will be implemented soon!");
+  // };
+
+  const LoginUser = async (e: React.FormEvent) => {
+    e.preventDefault(); //prevent page relaod
+    const response = await fetch(`${baseBackendUrl}/user/signin`, {
+      method: 'POST',
+      headers: {
+        'Content-type':'application/json'
+      },
+      body:JSON.stringify({
+        email,
+        password
+      }) 
+    })
+
+    const data = await response.json()
+    console.log(data)
+
+    if(data.token){
+      localStorage.setItem('token', data.token)
+      navigate('/dashboard')
+    } else {
+      alert(data.msg)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-n-1  flex items-center justify-center p-4">
@@ -27,7 +52,7 @@ const Login = () => {
           <p className="text-neutral-600">Please enter your details to sign in</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4 text-n-1">
+        <form onSubmit={(e) => LoginUser(e)} className="space-y-4 text-n-1">
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
               Email
