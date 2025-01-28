@@ -10,11 +10,11 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement actual signup logic
-    toast.success("Signup functionality will be implemented soon!");
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // TODO: Implement actual signup logic
+  //   toast.success("Signup functionality will be implemented soon!");
+  // };
 
   return (
     <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-4">
