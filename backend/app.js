@@ -1,22 +1,22 @@
-
-import express from 'express'
-import router from "./routes/index.js"
-import cors from 'cors'
+const express = require('express');
+const router = require ('./routes/index')
+const cors = require('cors')
 const PORT = process.env.PORT || 3000;
-import 'dotenv/config';
 
+require('dotenv').config()
 const app = express();
 
-app.use(express.json())
-app.use(cors())
-app.use('/api/v1', router)
 
-app.get('/', (req,res)=>{
+app.use(express.json());
+app.use(cors())
+app.use('/v1',router)
+
+app.get('/', (req, res)=>{
     res.json({
-        msg:"Server is now Running"
+        message:"Server is Runing"
     })
 })
 
-app.listen(PORT, ()=>{
+app.listen(PORT, ()=> {
     console.log(`Listening on Port ${PORT}`)
 })
