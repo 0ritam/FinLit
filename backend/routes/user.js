@@ -65,4 +65,37 @@ UserRoute.post("/signup", async (req, res)=>{
     
 })
 
+const signinZod = zod.object({
+    email: zod.string(),
+    password: zod.string().min(3)
+})
+
+UserRoute.post("/signin", async (req, res)=>{
+    const zodSignin = signinZod.safeParse(req.body)
+    if(!zodSignin.success){
+        res.status(411).json({
+            msg:"Error while login (zod error)"
+        })
+        return;
+    }
+    const FindUser = await User.findOne({
+        email: req.body.email,
+        password: req.body.password
+    })
+
+    if(FindUser != null) {
+        const email = FindUser.email
+        const token = jwt.sign({email:email}, JWT_SECRET)
+        res.json({
+            msg: "Succesfully logged in",
+            token: token
+        })
+        return;
+    }
+    res.status(411).json({
+        msg: "Error while Login"
+    })
+    return;
+})
+
 module.exports = UserRoute
