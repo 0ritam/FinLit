@@ -183,6 +183,30 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background
+     text-foreground;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2
+    h-2;
+  }
+
+  ::-webkit-scrollbar {
+    @apply bg-foreground/20
+    rounded-full
+    hover:bg-foreground/30;
+
+    
+  }
+}
+
+@layer utilities {
+  .container{
+    @apply px-4
+    mx-auto
+    
+    
+    2xl:max-w-screen-xl;
   }
 }

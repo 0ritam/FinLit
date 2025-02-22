@@ -9,7 +9,7 @@ import heroBanner from '@/assets/hero-banner.png';
 import brand1 from '@/assets/brand-logo-1.svg';
 import brand2 from '@/assets/brand-logo-2.svg';
 import brand3 from '@/assets/brand-logo-3.svg';
-import brand4 from '@/assets/brand-logo-4.svg';
+import brand4 from './brand-logo-4.svg';
 import brand5 from '@/assets/brand-logo-5.svg';
 import feature1 from '@/assets/feature-1.png';
 import feature2 from '@/assets/feature-2.png';
