@@ -6,6 +6,7 @@ import Features from "@/components/landing/Features";
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import NewHero from "@/components/landing/NewHero";
+import Brand from '@/components/landing/Brand';
 
 const Index = () => {
   return (
@@ -15,7 +16,8 @@ const Index = () => {
       <NewHero/>
       {/* <Navigation /> */}
       {/* <Hero /> */}
-      <TrustedBy />
+      {/* <TrustedBy /> */}
+      <Brand/>
       <Features />
       <Footer />
     </div>
