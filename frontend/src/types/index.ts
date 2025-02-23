@@ -1,3 +1,4 @@
+import { LucideIcon } from "lucide-react";
 import { ReactNode } from "react";
 
 type MenuItem = {
@@ -8,7 +9,7 @@ type MenuItem = {
   
   type SubmenuItem = {
     href: string;
-    icon?: JSX.Element;
+    icon?: LucideIcon;
     label: string;
     desc: string;
   }

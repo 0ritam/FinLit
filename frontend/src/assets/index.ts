@@ -8,6 +8,8 @@ import typei from '@/assets/icons8-typescript.svg'
 import expi from '@/assets/icons8-express-js.svg'
 import feature1 from '@/assets/feature-1.png';
 import feature2 from '@/assets/feature-2.png';
+import f1 from '@/assets/f1.png'
+import f2 from '@/assets/f2.png'
 import processBanner from '@/assets/process-banner.png';
 import overviewBanner from '@/assets/overview-banner.png';
 import blog1 from '@/assets/blog-1.jpg';
@@ -27,6 +29,8 @@ export {
   brands,
   feature1,
   feature2,
+  f1,
+  f2,
   processBanner,
   overviewBanner,
   blog1,

@@ -7,6 +7,7 @@ import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import NewHero from "@/components/landing/NewHero";
 import Brand from '@/components/landing/Brand';
+import NewFeatures from '@/components/landing/NewFeatures';
 
 const Index = () => {
   return (
@@ -17,8 +18,11 @@ const Index = () => {
       {/* <Navigation /> */}
       {/* <Hero /> */}
       {/* <TrustedBy /> */}
+      
       <Brand/>
-      <Features />
+      <NewFeatures/>
+      
+      
       <Footer />
     </div>
     </ReactLenis>

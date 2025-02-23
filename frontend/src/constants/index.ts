@@ -3,35 +3,38 @@ import { MenuItem } from '@/types';
 /**
  * Assets
  */
-// import {
-//   ChartArea,
-//   Building2,
-//   Component,
-//   Code,
-//   BetweenHorizonalEnd,
-//   BrainCircuit,
-//   Blocks,
-//   Terminal,
-//   Package,
-//   SquareMousePointer,
-//   ChartPie,
-//   Files,
-//   UserRoundPen,
-//   GitFork,
-//   LaptopMinimal,
-//   ArrowBigDownDash,
-//   CreditCard,
-//   Twitter,
-//   Github,
-//   Linkedin,
-//   Instagram,
-//   Youtube,
-// } from 'lucide-react';
-
-import { ChartArea } from 'lucide-react';
 import {
-  feature1,
-  feature2,
+  ChartArea,
+  Building2,
+  Component,
+  Code,
+  BetweenHorizonalEnd,
+  BrainCircuit,
+  Blocks,
+  Terminal,
+  Package,
+  SquareMousePointer,
+  ChartPie,
+  Files,
+  UserRoundPen,
+  GitFork,
+  LaptopMinimal,
+  ArrowBigDownDash,
+  CreditCard,
+  Twitter,
+  Github,
+  Linkedin,
+  Instagram,
+  Youtube,
+  icons,
+} from 'lucide-react';
+
+
+import {
+  // feature1,
+  // feature2,
+  f1,
+  f2,
   blog1,
   blog2,
   blog3,
@@ -42,48 +45,48 @@ import {
 
 // Header
 export const navMenu: MenuItem[] = [
-//   {
-//     href: '/products',
-//     label: 'Products',
-//     submenu: [
-//       {
-//         href: '#',
-//         // icon: <ChartArea/>,
-//         label: 'User Analytics',
-//         desc: 'Powerful options to securely authenticate and manage',
-//       },
-//       {
-//         href: '#',
-//         //icon: <Building2 />,
-//         label: 'B2B SaaS Suite',
-//         desc: 'Add-on features built specifically for B2B applications',
-//       },
-//       {
-//         href: '#',
-//         //icon: <Component />,
-//         label: 'React Components',
-//         desc: 'Embeddable prebuilt UI components for quick and seamless integrations',
-//       },
-//       {
-//         href: '#',
-//         //icon: <Code />,
-//         label: 'Next.js Analytics',
-//         desc: 'The fastest and most seamless authentication solution for Next.js',
-//       },
-//       {
-//         href: '#',
-//        // icon: <BetweenHorizonalEnd />,
-//         label: 'AnalytiX Elements',
-//         desc: 'Unstyled UI primitives for endless customization. Powered by AnalytiX',
-//       },
-//       {
-//         href: '#',
-//        // icon: <BrainCircuit />,
-//         label: 'Authentication for AI',
-//         desc: 'Authentication and abuse protection tailored to AI applications',
-//       },
-//     ],
-//   },
+  {
+    href: '/products',
+    label: 'Products',
+    submenu: [
+      {
+        href: '#',
+        icon: ChartArea,
+        label: 'User Analytics',
+        desc: 'Powerful options to securely authenticate and manage',
+      },
+      {
+        href: '#',
+        icon: Building2,
+        label: 'B2B SaaS Suite',
+        desc: 'Add-on features built specifically for B2B applications',
+      },
+      {
+        href: '#',
+        icon: Component,
+        label: 'React Components',
+        desc: 'Embeddable prebuilt UI components for quick and seamless integrations',
+      },
+      {
+        href: '#',
+        icon: Code,
+        label: 'Next.js Analytics',
+        desc: 'The fastest and most seamless authentication solution for Next.js',
+      },
+      {
+        href: '#',
+        icon: BetweenHorizonalEnd,
+        label: 'AnalytiX Elements',
+        desc: 'Unstyled UI primitives for endless customization. Powered by AnalytiX',
+      },
+      {
+        href: '#',
+        icon: BrainCircuit ,
+        label: 'Authentication for AI',
+        desc: 'Authentication and abuse protection tailored to AI applications',
+      },
+    ],
+  },
   {
     href: '/features',
     label: 'Features',
@@ -94,25 +97,25 @@ export const navMenu: MenuItem[] = [
     submenu: [
       {
         href: '#',
-       // icon: <Terminal />,
+        icon: Terminal,
         label: 'Getting Started',
         desc: 'Powerful options to securely authenticate and manage',
       },
       {
         href: '#',
-        //icon: <Package />,
+        icon: Package ,
         label: 'Core Concepts',
         desc: 'Add-on features built specifically for B2B applications',
       },
       {
         href: '#',
-       // icon: <SquareMousePointer />,
+       icon: SquareMousePointer ,
         label: 'Customization',
         desc: 'Embeddable prebuilt UI components for quick and seamless integrations',
       },
       {
         href: '#',
-        //icon: <Blocks />,
+        icon: Blocks,
         label: 'Official Plugins',
         desc: 'The fastest and most seamless authentication solution for Next.js',
       },
@@ -124,49 +127,49 @@ export const navMenu: MenuItem[] = [
 // Hero
 export const heroData = {
   sectionSubtitle: 'All in one Finance Hub',
-  sectionTitle: 'Presenting the next-gen ',
-  decoTitle: 'Finance',
+  sectionTitle: 'The finance of Youth ',
+  decoTitle: 'FinLit',
   sectionText:
-    'Next-gen user analytics: Gain valuable insights into user behavior and drive data-informed decision-making with our revolutionary platform.',
+    'Next-gen finance Knowledge: Gain valuable insights of finance and drive data-informed decision-making with our revolutionary platform.',
 };
 
 // Feature
 export const featureData = {
   sectionSubtitle: 'Features',
-  sectionTitle: 'Discover Powerful Features',
+  sectionTitle: 'SuperCharge Your Knowledge',
   sectionText:
-    'Unleash the power of our platform with a multitude of powerful features, empowering you to achieve your goals.',
+    'Unleash the power of our platform with a multitude of useful features, empowering you to achieve your financial goals.',
   features: [
     {
-      //icon: <ChartPie size={32} />,
+      icon:ChartArea,
       iconBoxColor: 'bg-blue-600',
-      title: 'Advance Analytics',
-      desc: 'Experience advanced analytics capabilities that enable you to dive deep into data, uncover meaningful patterns, and derive actionable insights',
-      imgSrc: feature1,
+      title: 'Investment Insights',
+      desc: 'Experience Investment analytics that enable you to dive deep into data, uncover meaningful patterns, and derive actionable insights',
+      imgSrc: f1,
     },
     {
-      //icon: <Files size={32} />,
+      icon: Files ,
       iconBoxColor: 'bg-cyan-500',
-      title: 'Automated Reports',
-      desc: 'Save time and effort with automated reporting, generating comprehensive and accurate reports automatically, streamlining your data analysis',
-      imgSrc: feature2,
+      title: 'Expense Mangement',
+      desc: 'Save time and effort with automated reporting, generating comprehensive and accurate reports automatically, streamlining your expense Management',
+      imgSrc: f2,
     },
     {
-     // icon: <UserRoundPen size={32} />,
+     icon: UserRoundPen,
       iconBoxColor: 'bg-yellow-500',
-      title: 'Retention Report',
-      desc: 'Enhance retention with our report, maximizing customer engagement and loyalty for business',
+      title: 'Budget Tracking',
+      desc: 'Enhance budget tracking with our report, maximizing user engagement and loyalty for aspired goals',
     },
     {
-      //icon: <GitFork size={32} />,
+      icon: GitFork,
       iconBoxColor: 'bg-red-500',
-      title: 'A/B Test Variants',
-      desc: 'Efficiently compare A/B test variants to determine the most effective strategies',
+      title: 'Portfolio Management',
+      desc: 'Efficiently manage portfolios to determine the most effective strategies',
     },
     {
-     // icon: <Blocks size={32} />,
+     icon: Blocks,
       iconBoxColor: 'bg-purple-500',
-      title: 'Integration Directory',
+      title: 'Risk Management',
       desc: 'Seamlessly integrate with our directory, maximizing efficiency and unlocking the full potentials',
     },
   ],
