@@ -1,5 +1,7 @@
 const express = require('express');
 const UserRoute = require('./user');
+const moduleRoute = require('./module');
+const contentRoute  = require('./content')
 
 const router = express.Router();
 
@@ -8,5 +10,7 @@ router.get("/", (req, res)=>{
 })
 
 router.use('/user', UserRoute)
+router.use('/module',moduleRoute)
+router.use('/:moduleId/content',contentRoute)
 
 module.exports = router
