@@ -123,9 +123,9 @@ export const navMenu: MenuItem[] = [
 
 // Hero
 export const heroData = {
-  sectionSubtitle: 'All in one analytics tool',
-  sectionTitle: 'Presenting the next-gen user',
-  decoTitle: 'analytics',
+  sectionSubtitle: 'All in one Finance Hub',
+  sectionTitle: 'Presenting the next-gen ',
+  decoTitle: 'Finance',
   sectionText:
     'Next-gen user analytics: Gain valuable insights into user behavior and drive data-informed decision-making with our revolutionary platform.',
 };

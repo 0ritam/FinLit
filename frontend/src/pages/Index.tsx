@@ -1,3 +1,4 @@
+import { ReactLenis, useLenis } from 'lenis/react'
 import Navigation from "@/components/landing/Navigation";
 import Hero from "@/components/landing/Hero";
 import TrustedBy from "@/components/landing/TrustedBy";
@@ -8,7 +9,8 @@ import NewHero from "@/components/landing/NewHero";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-n-8 relative isolate overflow-hidden">
+    <ReactLenis root>
+      <div className="relative isolate overflow-hidden">
       <Header/>
       <NewHero/>
       {/* <Navigation /> */}
@@ -17,6 +19,8 @@ const Index = () => {
       <Features />
       <Footer />
     </div>
+    </ReactLenis>
+    
   );
 };
 
