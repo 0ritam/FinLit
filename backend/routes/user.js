@@ -47,10 +47,11 @@ UserRoute.post("/signup", async (req, res)=>{
         })
         const fullname = newUser.fullname
         const token = jwt.sign({
-            fullname: fullname
+            fullname: fullname,
+            userId : newUser._id
         }, JWT_SECRET)
         
-        const userId = newUser._id
+        
     
         res.status(200).json({
             msg: "New User created",
@@ -85,7 +86,8 @@ UserRoute.post("/signin", async (req, res)=>{
 
     if(FindUser != null) {
         const email = FindUser.email
-        const token = jwt.sign({email:email}, JWT_SECRET)
+        const id = FindUser._id
+        const token = jwt.sign({email:email,id : id}, JWT_SECRET)
         res.json({
             msg: "Succesfully logged in",
             token: token
