@@ -10,6 +10,8 @@ import {
   useTransform,
 } from "motion/react";
 import { useRef } from "react";
+import { cn } from "@/lib/utils";
+import { GridPattern } from "@/components/magicui/grid-pattern";
 
 const heroVariant: Variants = {
   start: {},
@@ -59,7 +61,17 @@ const NewHero = () => {
   });
 
   return (
-    <section className="py-10 md:py-16">
+    <section className="py-0 md:py-0">
+      <div className="relative flex size-full items-center justify-center rounded-lg  bg-background p-20">
+      <GridPattern
+        width={60}
+        height={60}
+        x={-1}
+        y={-1}
+        className={cn(
+          "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] ",
+        )}
+      />
       <motion.div
         variants={heroVariant}
         initial="start"
@@ -134,6 +146,9 @@ const NewHero = () => {
           ></motion.div>
         </div>
       </motion.div>
+    </div>
+    
+      
     </section>
   );
 };

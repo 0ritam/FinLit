@@ -10,6 +10,7 @@ import { expenseTrackingContent, expenseTrackingQuiz, expenseTrackingPracticeQui
 import { savingGoalsContent, savingGoalsQuiz, savingGoalsPracticeQuiz } from "@/data/budgeting/savingGoals";
 import { debtManagementContent, debtManagementQuiz, debtManagementPracticeQuiz } from "@/data/budgeting/debtManag";
 import { emergencyFundsContent, emergencyFundsQuiz, emergencyFundsPracticeQuiz } from "@/data/budgeting/emergency";
+import Header from "@/components/landing/Header";
 
 const chapters = [
   {
@@ -41,19 +42,19 @@ const chapters = [
 
 const customStyles = {
   container: "container mx-auto px-4 py-12 md:py-24 realtive",
-  banner: "bg-color-4 backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8",
+  banner: "bg-background backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8",
   bannerHeader: "text-center mb-12",
-  bannerTitle: "heading-xl mb-4 text-white",
-  bannerSubtitle: "text-xl text-neutral-600 max-w-2xl mx-auto",
-  chaptersContainer: "max-w-3xl mx-auto relative",
+  bannerTitle: "heading-xl mb-4 text-muted-foreground",
+  bannerSubtitle: "text-xl text-muted max-w-2xl mx-auto",
+  chaptersContainer: "max-w-3xl mx-auto relative ",
   chaptersList: "relative",
-  verticalLine: "absolute left-4 top-0 bottom-0 w-0.5 bg-black",
+  verticalLine: "absolute left-4 top-0 bottom-0 w-0.5 bg-popover-foreground",
   chapterItem: "flex items-center gap-8 mb-8 group",
   chapterMarker: "relative z-10 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center",
-  chapterCross: "text-black font-bold text-lg",
-  chapterContent: "flex-1 bg-color-4 p-6 rounded-xl shadow-sm border border-neutral-200 hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
+  chapterCross: "text-muted-foreground font-bold text-lg",
+  chapterContent: "flex-1 bg-card/60 p-6 rounded-xl shadow-sm border border-neutral-200 hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
   chapterTitle: "text-xl font-semibold mb-2 text-white",
-  chapterDescription: "text-neutral-600",
+  chapterDescription: "text-muted-foreground",
 };
 
 const Budgeting = () => {
@@ -63,8 +64,9 @@ const Budgeting = () => {
         <Route
           index
           element={
-            <div className="min-h-screen bg-neutral-100">
-              <Navigation />
+            <div className="min-h-screen bg-background">
+              {/* <Navigation /> */}
+              <Header/>
               <div className={customStyles.container}>
                 {/* Add glow effects */}
                 <motion.div
@@ -99,6 +101,19 @@ const Budgeting = () => {
                     >
                       Learn essential budgeting skills to take control of your finances
                     </motion.p>
+
+                    <motion.div
+            className="absolute bg-primary2 inset-5 blur-[90px] -z-10"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 2, delay: 0.5, ease: "backInOut" }}
+          ></motion.div>
+          <motion.div
+            className="absolute inset-0 bg-primary2 blur-[120px] scale-y-75 scale-x-125 rounded-full -z-10"
+            initial={{ scale: 0.4, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 2, delay: 1.5, ease: "backOut" }}
+          ></motion.div>
                   </div>
                 </div>
                 <div className={customStyles.chaptersContainer}>
