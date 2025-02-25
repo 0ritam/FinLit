@@ -176,57 +176,57 @@ export const featureData = {
 };
 
 // Process
-export const processData = {
-  sectionSubtitle: 'How it works',
-  sectionTitle: 'Easy Process to Get Started',
-  sectionText:
-    'Discover how it works by leveraging advanced algorithms and data analysis techniques.',
-  list: [
-    {
-     // icon: <LaptopMinimal size={32} />,
-      title: 'Create your account',
-      text: 'Join us now and create your account to start exploring our platform and unlocking exciting features.',
-    },
-    {
-     // icon: <ArrowBigDownDash size={32} />,
-      title: 'Install our tracking app',
-      text: 'Install our tracking app to effortlessly monitor and manage your activities, gaining valuable insights and optimizing your performance.',
-    },
-    {
-      //icon: <CreditCard size={32} />,
-      title: 'Start tracking your website',
-      text: 'Start tracking your website effortlessly to gain valuable insights into visitor behavior, performance metrics, and optimization opportunities.',
-    },
-  ],
-};
+// export const processData = {
+//   sectionSubtitle: 'How it works',
+//   sectionTitle: 'Easy Process to Get Started',
+//   sectionText:
+//     'Discover how it works by leveraging advanced algorithms and data analysis techniques.',
+//   list: [
+//     {
+//      // icon: <LaptopMinimal size={32} />,
+//       title: 'Create your account',
+//       text: 'Join us now and create your account to start exploring our platform and unlocking exciting features.',
+//     },
+//     {
+//      // icon: <ArrowBigDownDash size={32} />,
+//       title: 'Install our tracking app',
+//       text: 'Install our tracking app to effortlessly monitor and manage your activities, gaining valuable insights and optimizing your performance.',
+//     },
+//     {
+//       //icon: <CreditCard size={32} />,
+//       title: 'Start tracking your website',
+//       text: 'Start tracking your website effortlessly to gain valuable insights into visitor behavior, performance metrics, and optimization opportunities.',
+//     },
+//   ],
+// };
 
 // Overview
-export const overviewData = {
-  sectionSubtitle: 'Overview',
-  sectionTitle: 'All-In-One Analytics Tool',
-  sectionText:
-    'Powerful analytics made easy. Make data-driven decisions with our all-in-one tool.',
-  listTitle: 'More than 1M+ people around the world are already using',
-  list: [
-    {
-      title: '1M+',
-      text: 'Active Downloads',
-    },
-    {
-      title: '4.86',
-      text: 'Average Rating',
-    },
-    {
-      title: '60K+',
-      text: 'Active Users',
-    },
-  ],
-};
+// export const overviewData = {
+//   sectionSubtitle: 'Overview',
+//   sectionTitle: 'All-In-One Analytics Tool',
+//   sectionText:
+//     'Powerful analytics made easy. Make data-driven decisions with our all-in-one tool.',
+//   listTitle: 'More than 1M+ people around the world are already using',
+//   list: [
+//     {
+//       title: '1M+',
+//       text: 'Active Downloads',
+//     },
+//     {
+//       title: '4.86',
+//       text: 'Average Rating',
+//     },
+//     {
+//       title: '60K+',
+//       text: 'Active Users',
+//     },
+//   ],
+// };
 
 // Review
 export const reviewData = {
   sectionSubtitle: 'Reviews',
-  sectionTitle: 'What Our Customers Are Says',
+  sectionTitle: 'What Our Users Are Saying..',
   reviewCard: [
     {
       title: 'We’re building a better application now, thanks to AnalytiX.',
@@ -250,47 +250,47 @@ export const reviewData = {
 };
 
 // Blog
-export const blogData = {
-  sectionSubtitle: 'Our Blog',
-  sectionTitle: 'Resource Center',
-  sectionText:
-    'Unlock the potential of our resource center, accessing valuable information and insights for your business growth.',
-  blogs: [
-    {
-      imgSrc: blog1,
-      badge: 'Growth',
-      title: 'Why customer retention is the ultimate growth strategy?',
-      author: {
-        avatarSrc: avatar1,
-        authorName: 'John Carte',
-        publishDate: 'Oct 10, 2024',
-        readingTime: '8 min read',
-      },
-    },
-    {
-      imgSrc: blog2,
-      badge: 'Marketing',
-      title: 'Optimizing your advertising campaigns for higher ROAS',
-      author: {
-        avatarSrc: avatar2,
-        authorName: 'Annette Black',
-        publishDate: 'Jul 15, 2024',
-        readingTime: '5 min read',
-      },
-    },
-    {
-      imgSrc: blog3,
-      badge: 'Growth',
-      title: 'How to build the ultimate tech stack for growth',
-      author: {
-        avatarSrc: avatar3,
-        authorName: 'Ralph Edwards',
-        publishDate: 'Mar 24, 2024',
-        readingTime: '2 min read',
-      },
-    },
-  ],
-};
+// export const blogData = {
+//   sectionSubtitle: 'Our Blog',
+//   sectionTitle: 'Resource Center',
+//   sectionText:
+//     'Unlock the potential of our resource center, accessing valuable information and insights for your business growth.',
+//   blogs: [
+//     {
+//       imgSrc: blog1,
+//       badge: 'Growth',
+//       title: 'Why customer retention is the ultimate growth strategy?',
+//       author: {
+//         avatarSrc: avatar1,
+//         authorName: 'John Carte',
+//         publishDate: 'Oct 10, 2024',
+//         readingTime: '8 min read',
+//       },
+//     },
+//     {
+//       imgSrc: blog2,
+//       badge: 'Marketing',
+//       title: 'Optimizing your advertising campaigns for higher ROAS',
+//       author: {
+//         avatarSrc: avatar2,
+//         authorName: 'Annette Black',
+//         publishDate: 'Jul 15, 2024',
+//         readingTime: '5 min read',
+//       },
+//     },
+//     {
+//       imgSrc: blog3,
+//       badge: 'Growth',
+//       title: 'How to build the ultimate tech stack for growth',
+//       author: {
+//         avatarSrc: avatar3,
+//         authorName: 'Ralph Edwards',
+//         publishDate: 'Mar 24, 2024',
+//         readingTime: '2 min read',
+//       },
+//     },
+//   ],
+// };
 
 // Cta
 export const ctaData = {
@@ -389,27 +389,27 @@ export const footerData = {
       ],
     },
   ],
-  copyright: '© 2024 codewithsadee',
-  socialLinks: [
-    {
-      href: 'https://x.com/codewithsadee_',
-      //icon: <Twitter size={18} />,
-    },
-    {
-      href: 'https://github.com/codewithsadee',
-      //icon: <Github size={18} />,
-    },
-    {
-      href: 'https://www.linkedin.com/in/codewithsadee/',
-      //icon: <Linkedin size={18} />,
-    },
-    {
-      href: 'https://www.instagram.com/codewithsadee',
-      //icon: <Instagram size={18} />,
-    },
-    {
-      href: 'https://www.youtube.com/codewithsadee',
-      //icon: <Youtube size={18} />,
-    },
-  ],
+  copyright: '© 2025 Finlit',
+  // socialLinks: [
+  //   {
+  //     href: 'https://x.com/codewithsadee_',
+  //     icon: Twitter ,
+  //   },
+  //   {
+  //     href: 'https://github.com/codewithsadee',
+  //     //icon: <Github size={18} />,
+  //   },
+  //   {
+  //     href: 'https://www.linkedin.com/in/codewithsadee/',
+  //     //icon: <Linkedin size={18} />,
+  //   },
+  //   {
+  //     href: 'https://www.instagram.com/codewithsadee',
+  //     //icon: <Instagram size={18} />,
+  //   },
+  //   {
+  //     href: 'https://www.youtube.com/codewithsadee',
+  //     //icon: <Youtube size={18} />,
+  //   },
+  // ],
 };

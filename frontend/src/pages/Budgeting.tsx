@@ -1,5 +1,4 @@
-import Navigation from "@/components/landing/Navigation1";
-import Footer from "@/components/landing/Footer";
+
 import { motion } from "framer-motion";
 import { Link, Routes, Route } from "react-router-dom";
 import ChapterLayout from '@/components/learning/ChapterLayout';
@@ -10,7 +9,8 @@ import { expenseTrackingContent, expenseTrackingQuiz, expenseTrackingPracticeQui
 import { savingGoalsContent, savingGoalsQuiz, savingGoalsPracticeQuiz } from "@/data/budgeting/savingGoals";
 import { debtManagementContent, debtManagementQuiz, debtManagementPracticeQuiz } from "@/data/budgeting/debtManag";
 import { emergencyFundsContent, emergencyFundsQuiz, emergencyFundsPracticeQuiz } from "@/data/budgeting/emergency";
-import Header from "@/components/landing/Header";
+import ContentHeader from "@/components/landing/ContentHeader";
+import NewFooter from "@/components/landing/NewFooter";
 
 const chapters = [
   {
@@ -42,7 +42,7 @@ const chapters = [
 
 const customStyles = {
   container: "container mx-auto px-4 py-12 md:py-24 realtive",
-  banner: "bg-background backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8",
+  banner: "bg-background backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8 mt-32",
   bannerHeader: "text-center mb-12",
   bannerTitle: "heading-xl mb-4 text-muted-foreground",
   bannerSubtitle: "text-xl text-muted max-w-2xl mx-auto",
@@ -66,7 +66,7 @@ const Budgeting = () => {
           element={
             <div className="min-h-screen bg-background">
               {/* <Navigation /> */}
-              <Header/>
+              <ContentHeader/>
               <div className={customStyles.container}>
                 {/* Add glow effects */}
                 <motion.div
@@ -103,13 +103,13 @@ const Budgeting = () => {
                     </motion.p>
 
                     <motion.div
-            className="absolute bg-primary2 inset-5 blur-[90px] -z-10"
+            className="absolute bg-primary2 inset-5 blur-[60px] -z-10"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2, delay: 0.5, ease: "backInOut" }}
           ></motion.div>
           <motion.div
-            className="absolute inset-0 bg-primary2 blur-[120px] scale-y-75 scale-x-125 rounded-full -z-10"
+            className="absolute inset-0 bg-primary2 blur-[80px] scale-y-75 scale-x-125 rounded-full -z-10"
             initial={{ scale: 0.4, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2, delay: 1.5, ease: "backOut" }}
@@ -141,7 +141,7 @@ const Budgeting = () => {
                   </div>
                 </div>
               </div>
-              <Footer />
+              <NewFooter />
             </div>
           }
         />
