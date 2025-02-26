@@ -11,7 +11,7 @@ const NewFooter = () => {
                 <div className="grid grid-cols-2 gap-x-2 gap-y-8 text-sm sm:grid-cols-4 lg:col-span-3">
                     {footerData.links.map(({title, items}, index) => (
                         <ul key={index}>
-                            <p className="mb-4">{title}</p>
+                            <p className="mb-4 text-white">{title}</p>
 
                             {items.map(({href, label},index) => (
                                 <li key={index} className="text-muted-foreground">
@@ -30,17 +30,6 @@ const NewFooter = () => {
                         {footerData.copyright}
                     </a>
 
-                    {/* <div className="social-wrapper">
-                        <ul className="">
-                            {footerData.socialLinks.map(({href, icons}, index) => (
-                                <li key={index}>
-                                    <a href={href}>
-                                        {icons}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div> */}
             </div>
         </div>
     </footer>

@@ -1,6 +1,8 @@
 
 import favicon from '@/assets/favicon.svg';
+import favicon2 from '@/assets/favicon2.svg'
 import logo from '@/assets/logo.svg';
+import reallogo from '@/assets/logo-no-background.svg'
 import heroBanner from '@/assets/hero-banner.png';
 import brand3 from '@/assets/brand-logo-3.svg';
 import reacti from '@/assets/icons8-react.svg'
@@ -22,7 +24,9 @@ const brands = [reacti, typei, brand3, expi];
 
 export {
   favicon,
+  favicon2,
   logo,
+  reallogo,
   heroBanner,
   brands,
   f1,

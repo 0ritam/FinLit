@@ -1,5 +1,5 @@
 import React from 'react'
-import { favicon, logo } from '@/assets';
+import { favicon, logo, reallogo, favicon2} from '@/assets';
 
 
 type LogoProps= {
@@ -14,13 +14,13 @@ const Logo = ({variant =  'default'}: LogoProps) => {
     
     >
         {variant === 'default' && (
-            <img src={logo} alt = "finlit" width={150}
-            height={31}/>
+            <img src={reallogo} alt = "finlit" width={900}
+            height={250}/>
         )}
 
 {variant === 'icon' && (
-            <img src={favicon} alt = "finlit" width={32}
-            height={32}/>
+            <img src={favicon2} alt = "finlit" width={202}
+            height={202}/>
         )}
     </a>
   )
