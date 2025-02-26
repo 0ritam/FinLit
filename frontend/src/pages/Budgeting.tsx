@@ -44,7 +44,7 @@ const customStyles = {
   container: "container mx-auto px-4 py-12 md:py-24 realtive",
   banner: "bg-background backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8 mt-32",
   bannerHeader: "text-center mb-12",
-  bannerTitle: "heading-xl mb-4 text-muted-foreground",
+  bannerTitle: "heading-xl mb-4 text-white",
   bannerSubtitle: "text-xl text-muted max-w-2xl mx-auto",
   chaptersContainer: "max-w-3xl mx-auto relative ",
   chaptersList: "relative",
@@ -52,7 +52,7 @@ const customStyles = {
   chapterItem: "flex items-center gap-8 mb-8 group",
   chapterMarker: "relative z-10 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center",
   chapterCross: "text-muted-foreground font-bold text-lg",
-  chapterContent: "flex-1 bg-card/60 p-6 rounded-xl shadow-sm border border-neutral-200 hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
+  chapterContent: "flex-1 bg-card/60 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
   chapterTitle: "text-xl font-semibold mb-2 text-white",
   chapterDescription: "text-muted-foreground",
 };
