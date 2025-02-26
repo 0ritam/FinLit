@@ -1,4 +1,9 @@
+
+
+// The original budgeting basics content from your message
 export const budgetingBasicsContent = {
+  title: "Budgeting Basics",
+  description: "Learn the fundamentals of budgeting to manage your finances effectively.",
   sections: [
     {
       heading: "What is Budgeting?",
@@ -20,10 +25,11 @@ export const budgetingBasicsContent = {
         "To create a budget, start by listing all your sources of income...",
         "Next, list all your expenses, categorize them, and compare your total income to your total expenses..."
       ]
-    },
-    // More sections...
+    }
   ]
 };
+
+
 
 export const budgetingBasicsQuiz = [
   {

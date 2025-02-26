@@ -9,10 +9,10 @@ interface SidebarItem {
 }
 
 const customStyles = {
-  container: "container-padding py-8",
+  container: "container-padding py-8 ",
   layout: "flex gap-8 max-w-7xl mx-auto",
   sidebar: "w-72 shrink-0",
-  sidebarContent: "bg-n-7 rounded-2xl p-6 shadow-lg border border-n-6 sticky top-8",
+  sidebarContent: "bg-background/70 rounded-2xl p-6 shadow-lg border border-n-6 sticky top-8",
   chapterTitle: "h5 text-n-1 mb-6 pb-4 border-b border-n-6",
   nav: "space-y-3",
   navItem: (isActive: boolean) => `
@@ -24,7 +24,7 @@ const customStyles = {
   `,
   icon: "text-xl",
   divider: "h-0.5 bg-n-6 mx-auto my-2",
-  mainContent: "flex-1 bg-n-7 rounded-2xl p-6 shadow-lg border border-n-6 min-h-[calc(100vh-4rem)]"
+  mainContent: "flex-1 bg-background/70 rounded-2xl p-6 shadow-lg border border-n-6 min-h-[calc(100vh-4rem)]"
 };
 
 const ChapterLayout = ({ chapterTitle }: { chapterTitle: string }) => {
@@ -49,7 +49,7 @@ const ChapterLayout = ({ chapterTitle }: { chapterTitle: string }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-n-8">
+    <div className="min-h-screen bg-background">
       <div className={customStyles.container}>
         <div className={customStyles.layout}>
           {/* Sidebar */}

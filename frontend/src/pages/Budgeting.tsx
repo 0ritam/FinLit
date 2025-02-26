@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { Link, Routes, Route } from "react-router-dom";
 import ChapterLayout from '@/components/learning/ChapterLayout';
-import ChapterContent from '@/components/learning/ChapterContent';
+// import ChapterContent from '@/components/learning/ChapterContent';
+import { FinancialBentoGrid } from "@/components/learning/ChapterContent";
 import ChapterQuiz from '@/components/learning/ChapterQuiz';
 import { budgetingBasicsContent, budgetingBasicsQuiz, budgetingPracticeQuiz } from "@/data/budgeting/basics";
 import { expenseTrackingContent, expenseTrackingQuiz, expenseTrackingPracticeQuiz } from "@/data/budgeting/expense";
@@ -52,7 +53,7 @@ const customStyles = {
   chapterItem: "flex items-center gap-8 mb-8 group",
   chapterMarker: "relative z-10 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center",
   chapterCross: "text-muted-foreground font-bold text-lg",
-  chapterContent: "flex-1 bg-card/60 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
+  chapterContent: "flex-1 bg-card/80 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
   chapterTitle: "text-xl font-semibold mb-2 text-white",
   chapterDescription: "text-muted-foreground",
 };
@@ -148,31 +149,34 @@ const Budgeting = () => {
 
         {/* Modules */}
         <Route path="basics" element={<ChapterLayout chapterTitle="Basics of Budgeting" />}>
-          <Route path="content" element={<ChapterContent title="Basics of Budgeting" content={budgetingBasicsContent} />} />
+        <Route 
+  path="content" 
+  element={<FinancialBentoGrid title="Basics of Budgeting" content={budgetingBasicsContent} />} 
+/>
           <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={budgetingBasicsQuiz} isBasic={true} />} />
-          <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={budgetingPracticeQuiz} isBasic={false} />} />
+          <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={budgetingPracticeQuiz} isBasic={true} />} />
         </Route>
 
         <Route path="tracking" element={<ChapterLayout chapterTitle="Expense Tracking" />}>
-          <Route path="content" element={<ChapterContent title="Expense Tracking" content={expenseTrackingContent} />} />
+          {/* <Route path="content" element={<ChapterContent title="Expense Tracking" content={expenseTrackingContent} />} /> */}
           <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={expenseTrackingQuiz} isBasic={true} />} />
           <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={expenseTrackingPracticeQuiz} isBasic={false} />} />
         </Route>
 
         <Route path="goals" element={<ChapterLayout chapterTitle="Savings Goals" />}>
-          <Route path="content" element={<ChapterContent title="Savings Goals" content={savingGoalsContent} />} />
+          {/* <Route path="content" element={<ChapterContent title="Savings Goals" content={savingGoalsContent} />} /> */}
           <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={savingGoalsQuiz} isBasic={true} />} />
           <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={savingGoalsPracticeQuiz} isBasic={false} />} />
         </Route>
 
         <Route path="debt" element={<ChapterLayout chapterTitle="Debt Management" />}>
-          <Route path="content" element={<ChapterContent title="Debt Management" content={debtManagementContent} />} />
+          {/* <Route path="content" element={<ChapterContent title="Debt Management" content={debtManagementContent} />} /> */}
           <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={debtManagementQuiz} isBasic={true} />} />
           <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={debtManagementPracticeQuiz} isBasic={false} />} />
         </Route>
 
         <Route path="emergency-fund" element={<ChapterLayout chapterTitle="Emergency Funds" />}>
-          <Route path="content" element={<ChapterContent title="Emergency Funds" content={emergencyFundsContent} />} />
+          {/* <Route path="content" element={<ChapterContent title="Emergency Funds" content={emergencyFundsContent} />} /> */}
           <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={emergencyFundsQuiz} isBasic={true} />} />
           <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={emergencyFundsPracticeQuiz} isBasic={false} />} />
         </Route>

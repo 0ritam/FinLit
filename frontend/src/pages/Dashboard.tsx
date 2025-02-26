@@ -1,7 +1,8 @@
-import Navigation from '../components/landing/Navigation1';
+import ContentHeader from "@/components/landing/ContentHeader";
+
 import '../components/landing/Dashboard.css';
 import { useEffect, useState } from 'react';
-import Footer from '@/components/landing/Footer';
+
 
 const Dashboard = () => {
 
@@ -43,8 +44,8 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-neutral-100">
-        <Navigation />
+      <div className="min-h-screen bg-background">
+        <ContentHeader/>
         <div className='main max-w-6xl min-h-screen bg-white p-5'>
           <h1 className="intro">Welcome back, Romit Shah</h1>
           <div className="mt-4 p-4 border border-gray-200 rounded-2xl bg-gray-100 flex flex-col sm:flex-row gap-4">
@@ -99,7 +100,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        
       </div>
     </>
   );

@@ -48,7 +48,7 @@ const customStyles = {
   chapterItem: "flex items-center gap-8 mb-8 group",
   chapterMarker: "relative z-10 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center",
   chapterCross: "text-muted-foreground font-bold text-lg",
-  chapterContent: "flex-1 bg-card/60 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
+  chapterContent: "flex-1 bg-card/80 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
   chapterTitle: "text-xl font-semibold mb-2 text-white",
   chapterDescription: "text-muted-foreground",
 };

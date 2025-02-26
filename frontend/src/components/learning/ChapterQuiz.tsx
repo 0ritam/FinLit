@@ -39,7 +39,7 @@ const ChapterQuiz = ({ title, questions, isBasic = true }: ChapterQuizProps) => 
     >
       <h1 className="h2 text-n-1 mb-6">{title}</h1>
       
-      <div className="bg-n-6 rounded-xl p-6 mb-4">
+      <div className="bg-n-7 rounded-xl p-6 mb-4">
         <h2 className="h3 text-n-1 mb-4">Question {currentQuestion + 1} of {questions.length}</h2>
         <p className="body-1 text-n-1 mb-6">{questions[currentQuestion].question}</p>
         
@@ -55,8 +55,8 @@ const ChapterQuiz = ({ title, questions, isBasic = true }: ChapterQuizProps) => 
                     ? 'bg-color-4/10 border-color-4'
                     : index === selectedAnswer
                     ? 'bg-color-3/10 border-color-3'
-                    : 'bg-n-1 border-n-2'
-                  : 'bg-n-1 border-n-2 hover:border-color-1'
+                    : 'bg-background border-n-2'
+                  : 'bg-background border-n-2 hover:border-color-1'
               } border`}
             >
               {option}
