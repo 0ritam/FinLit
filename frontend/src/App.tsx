@@ -11,6 +11,7 @@ import Investing from "./pages/Investing";
 import Saving from "./pages/Saving";
 import Dashboard from "./pages/Dashboard";
 import Fraud from "./pages/FraudPrevention"
+import ProtectedRoute from "./lib/protected-routes";
 
 const queryClient = new QueryClient();
 
@@ -22,13 +23,26 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/budgeting/*" element={<Budgeting />} />
-          <Route path="/investing/*" element={<Investing />} />
-          <Route path="/saving/*" element={<Saving />} />
-          <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/fraud-prevention" element={<Fraud/>} />
+          {/* <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/budgeting/*" element={
+            <ProtectedRoute>
+              <Budgeting />
+            </ProtectedRoute>
+            
+            } />
+          <Route path="/investing/*" element={<ProtectedRoute>
+              <Investing />
+            </ProtectedRoute>} />
+          <Route path="/saving/*" element={<ProtectedRoute>
+              <Saving />
+            </ProtectedRoute>} />
+          <Route path="/dashboard" element={<ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>} />
+          <Route path="/fraud-prevention" element={<ProtectedRoute>
+              <Fraud/>
+            </ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

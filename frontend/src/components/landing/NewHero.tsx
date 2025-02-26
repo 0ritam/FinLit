@@ -12,6 +12,7 @@ import {
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/magicui/grid-pattern";
+import { useAuth, useClerk } from "@clerk/clerk-react";
 
 const heroVariant: Variants = {
   start: {},
@@ -40,9 +41,15 @@ const heroChildVariant: Variants = {
 };
 const NewHero = () => {
   const navigate = useNavigate();
+  const { isSignedIn } = useAuth();
+  const { redirectToSignUp  } = useClerk();
 
   const handleStart = () => {
-    navigate("dashboard");
+    if (isSignedIn) {
+      navigate("/dashboard"); 
+    } else {
+      redirectToSignUp(); 
+    }
   };
 
   const heroBannerRef = useRef<HTMLElement>(null);
@@ -111,7 +118,9 @@ const NewHero = () => {
             variants={heroChildVariant}
             className="text-white flex justify-center gap-2 mt-6 md:mt-10"
           >
-            <Button onClick={handleStart}> Have A Look</Button>
+            <Button onClick={
+              handleStart
+              }> Have A Look</Button>
 
             <Button variant="ghost"> Have Demo</Button>
           </motion.div>

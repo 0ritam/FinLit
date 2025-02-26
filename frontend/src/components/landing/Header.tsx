@@ -13,11 +13,12 @@ import { NavigationMenu,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
  } from '../ui/navigation-menu'
-
- import { Link } from "react-router-dom";
+ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+ 
 
 
 const Header = () => {
+    
   return (
     <header className='border h-16 grid grid-cols-1 items-center'>
         <div className='container flex justify-between lg:grid lg:grid-cols-[1fr,3fr,1fr]'>
@@ -64,16 +65,21 @@ const Header = () => {
             </NavigationMenu>
 
             <div className='flex items-center gap-2 justify-end max-lg:hidden'>
-                <Button variant='ghost'>
-                    <Link to="/signup">
-                                    Sign Up
-                                    </Link>
-                </Button>
-                <Button>
-                    <Link to="/login">
-                                    Sign In
-                                    </Link>
-                </Button>
+                
+                <SignedOut>
+        <Button>
+            <SignInButton />
+        </Button>
+    </SignedOut>
+
+    {/* Show UserButton only when user is signed in */}
+    <SignedIn>
+        <Button variant='ghost'>
+            <UserButton />
+        </Button>
+    </SignedIn>
+                
+      
             </div>
 
             <Popover>

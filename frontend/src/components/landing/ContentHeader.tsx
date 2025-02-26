@@ -17,6 +17,8 @@ import {
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
 
+import { SignedIn, UserButton } from "@clerk/clerk-react";
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -67,12 +69,11 @@ const Navigation = () => {
           >
             Dashboard
           </Link>
-          <Button variant="ghost">
-            <Link to="/signup">Sign Up</Link>
-          </Button>
-          <Button>
-            <Link to="/login">Sign In</Link>
-          </Button>
+          <SignedIn>
+                  <Button variant='ghost'>
+                      <UserButton />
+                  </Button>
+              </SignedIn>
         </div>
 
         <Popover>
