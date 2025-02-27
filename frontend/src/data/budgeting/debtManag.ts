@@ -1,28 +1,31 @@
 export const debtManagementContent = {
-    sections: [
-      {
-        heading: "What is Debt Management?",
-        paragraphs: [
-          "Debt management is the process of strategically handling your debt to minimize its impact on your finances.",
-          "It involves planning repayment, reducing interest costs, and staying on top of your financial obligations."
-        ]
-      },
-      {
-        heading: "Why is Debt Management Important?",
-        paragraphs: [
-          "Proper debt management prevents financial stress and ensures you maintain a healthy credit score.",
-          "It helps you pay off debts faster and frees up resources for saving and other goals."
-        ]
-      },
-      {
-        heading: "How to Manage Debt Effectively?",
-        paragraphs: [
-          "List all your debts, including amounts, interest rates, and repayment schedules.",
-          "Prioritize high-interest debts first or consider consolidation to reduce overall costs."
-        ]
-      },
-    ]
-  };
+  title: "Debt Management",
+  description: "Learn how to manage and reduce debt effectively to maintain financial stability.",
+  sections: [
+    {
+      heading: "What is Debt Management?",
+      paragraphs: [
+        "Debt management is the process of strategically handling your debt to minimize its impact on your finances.",
+        "It involves planning repayment, reducing interest costs, and staying on top of your financial obligations."
+      ]
+    },
+    {
+      heading: "Why is Debt Management Important?",
+      paragraphs: [
+        "Proper debt management prevents financial stress and ensures you maintain a healthy credit score.",
+        "It helps you pay off debts faster and frees up resources for saving and other goals."
+      ]
+    },
+    {
+      heading: "How to Manage Debt Effectively?",
+      paragraphs: [
+        "List all your debts, including amounts, interest rates, and repayment schedules.",
+        "Prioritize high-interest debts first or consider consolidation to reduce overall costs."
+      ]
+    }
+  ]
+};
+
   
   export const debtManagementQuiz = [
     {

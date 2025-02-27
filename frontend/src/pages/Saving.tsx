@@ -3,7 +3,7 @@ import NewFooter from "@/components/landing/NewFooter";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ChapterLayout from '@/components/learning/ChapterLayout';
-import ChapterContent from '@/components/learning/ChapterContent';
+// import ChapterContent from '@/components/learning/ChapterContent';
 import ChapterQuiz from '@/components/learning/ChapterQuiz';
 import { savingBasicsContent, savingBasicsQuiz, savingPracticeQuiz } from "@/data/saving/basics";
 import { Routes, Route } from "react-router-dom";
@@ -135,7 +135,7 @@ const Saving = () => {
         </div>
       } />
       <Route path="basics" element={<ChapterLayout chapterTitle="Saving Basics" />}>
-        <Route path="content" element={<ChapterContent title="Saving Basics" content={savingBasicsContent} />} />
+        {/* <Route path="content" element={<ChapterContent title="Saving Basics" content={savingBasicsContent} />} /> */}
         <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={savingBasicsQuiz} isBasic={true} />} />
         <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={savingPracticeQuiz} isBasic={false} />} />
       </Route>

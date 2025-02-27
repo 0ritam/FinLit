@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import ContentHeader from "@/components/landing/ContentHeader";
 
 interface SidebarItem {
   title: string;
@@ -50,6 +51,7 @@ const ChapterLayout = ({ chapterTitle }: { chapterTitle: string }) => {
 
   return (
     <div className="min-h-screen bg-background">
+      <ContentHeader/>
       <div className={customStyles.container}>
         <div className={customStyles.layout}>
           {/* Sidebar */}

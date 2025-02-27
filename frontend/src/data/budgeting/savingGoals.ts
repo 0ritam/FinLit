@@ -1,28 +1,31 @@
 export const savingGoalsContent = {
-    sections: [
-      {
-        heading: "What are Saving Goals?",
-        paragraphs: [
-          "Saving goals are specific objectives you set to save money for a particular purpose.",
-          "These could include buying a house, planning a vacation, or building a retirement fund."
-        ]
-      },
-      {
-        heading: "Why are Saving Goals Important?",
-        paragraphs: [
-          "Having saving goals provides motivation and direction for your financial planning.",
-          "It helps you prioritize your spending and ensure that you are prepared for future needs."
-        ]
-      },
-      {
-        heading: "How to Set Saving Goals?",
-        paragraphs: [
-          "Start by identifying your financial priorities and estimating how much money you'll need.",
-          "Set a timeline for achieving each goal, and create a plan to save a specific amount regularly."
-        ]
-      },
-    ]
-  };
+  title: "Saving Goals",
+  description: "Learn how to set and achieve saving goals to secure your financial future.",
+  sections: [
+    {
+      heading: "What are Saving Goals?",
+      paragraphs: [
+        "Saving goals are specific objectives you set to save money for a particular purpose.",
+        "These could include buying a house, planning a vacation, or building a retirement fund."
+      ]
+    },
+    {
+      heading: "Why are Saving Goals Important?",
+      paragraphs: [
+        "Having saving goals provides motivation and direction for your financial planning.",
+        "It helps you prioritize your spending and ensure that you are prepared for future needs."
+      ]
+    },
+    {
+      heading: "How to Set Saving Goals?",
+      paragraphs: [
+        "Start by identifying your financial priorities and estimating how much money you'll need.",
+        "Set a timeline for achieving each goal, and create a plan to save a specific amount regularly."
+      ]
+    }
+  ]
+};
+
 
   export const savingGoalsQuiz = [
     {

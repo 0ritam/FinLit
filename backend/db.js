@@ -3,20 +3,20 @@ const mongoose = require('mongoose');
 
 // User Schema
 const userSchema = new mongoose.Schema({
-  fullname: {
+  clerkUserId: {
     type: String,
     required: true,
-    minLength: [3, 'Fullname must be at least 3 characters']
+    unique:true,
+    
   },
-  email: {
-    type: String,
-    required: true
+  firstName: {
+    type: String
   },
-  password: {
-    type: String,
-    required: true
+  lastName: {
+    type: String
   },
-});
+  
+}, { timestamps: true });
 
 // Section Schema
 const sectionSchema = new mongoose.Schema({

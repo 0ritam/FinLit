@@ -1,28 +1,31 @@
 export const expenseTrackingContent = {
-    sections: [
-      {
-        heading: "What is Expense Tracking?",
-        paragraphs: [
-          "Expense tracking involves recording all your spending to understand where your money is going.",
-          "It helps identify unnecessary expenditures, monitor financial habits, and ensure you stay within your budget."
-        ]
-      },
-      {
-        heading: "Why is Expense Tracking Important?",
-        paragraphs: [
-          "Tracking expenses is crucial for managing your finances effectively and avoiding overspending.",
-          "It enables you to make informed decisions, identify areas where you can save, and improve your overall financial health."
-        ]
-      },
-      {
-        heading: "How to Track Expenses?",
-        paragraphs: [
-          "To track expenses, start by keeping a record of all your purchases, whether big or small.",
-          "Use tools like spreadsheets, mobile apps, or dedicated software to categorize and analyze your spending patterns."
-        ]
-      },
-    ]
-  };
+  title: "Expense Tracking",
+  description: "Learn how to track your expenses effectively to gain control over your finances.",
+  sections: [
+    {
+      heading: "What is Expense Tracking?",
+      paragraphs: [
+        "Expense tracking involves recording all your spending to understand where your money is going.",
+        "It helps identify unnecessary expenditures, monitor financial habits, and ensure you stay within your budget."
+      ]
+    },
+    {
+      heading: "Why is Expense Tracking Important?",
+      paragraphs: [
+        "Tracking expenses is crucial for managing your finances effectively and avoiding overspending.",
+        "It enables you to make informed decisions, identify areas where you can save, and improve your overall financial health."
+      ]
+    },
+    {
+      heading: "How to Track Expenses?",
+      paragraphs: [
+        "To track expenses, start by keeping a record of all your purchases, whether big or small.",
+        "Use tools like spreadsheets, mobile apps, or dedicated software to categorize and analyze your spending patterns."
+      ]
+    }
+  ]
+};
+
   
 
   export const expenseTrackingQuiz = [
