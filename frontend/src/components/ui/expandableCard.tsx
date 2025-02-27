@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/useOutsideCall";
 import { IconX } from "@tabler/icons-react";
 import { blog1 } from "@/assets";
-import { avatar1 } from "@/assets";
 import { reallogo } from "@/assets";
 
 

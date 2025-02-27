@@ -36,7 +36,7 @@ interface FinancialBentoGridProps {
   };
 }
 
-export function FinancialBentoGrid({ title, content }: FinancialBentoGridProps) {
+export function FinancialBentoGridS({ title, content }: FinancialBentoGridProps) {
   // Create a bento grid item from the provided content
   const items = [
     {
@@ -92,4 +92,4 @@ export function FinancialBentoGrid({ title, content }: FinancialBentoGridProps) 
   );
 }
 
-export default FinancialBentoGrid;
+export default FinancialBentoGridS;

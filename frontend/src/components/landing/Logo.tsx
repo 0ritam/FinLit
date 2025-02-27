@@ -1,5 +1,5 @@
 import React from 'react'
-import { favicon, logo, reallogo, favicon2} from '@/assets';
+import { favicon, reallogo, favicon2} from '@/assets';
 
 
 type LogoProps= {

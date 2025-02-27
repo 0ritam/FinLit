@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { Link, Routes, Route } from "react-router-dom";
 import ChapterLayout from "@/components/learning/ChapterLayout";
 import { FinancialBentoGrid } from "@/components/learning/BudgetContent/BasicCont";
+import { FinancialBentoGridD } from "@/components/learning/BudgetContent/DebtCont";
+import { FinancialBentoGridE } from "@/components/learning/BudgetContent/ExpenseCont";
+import { FinancialBentoGridS } from "@/components/learning/BudgetContent/SavingGoal";
 import ChapterQuiz from "@/components/learning/ChapterQuiz";
 import {
   budgetingBasicsContent,
@@ -207,7 +210,7 @@ const Budgeting = () => {
           path="tracking"
           element={<ChapterLayout chapterTitle="Expense Tracking" />}
         >
-          <Route path="content" element={<FinancialBentoGrid title="Expense Tracking" content={expenseTrackingContent} />} />
+          <Route path="content" element={<FinancialBentoGridE title="Expense Tracking" content={expenseTrackingContent} />} />
           <Route
             path="basic-quiz"
             element={
@@ -234,7 +237,7 @@ const Budgeting = () => {
           path="goals"
           element={<ChapterLayout chapterTitle="Savings Goals" />}
         >
-          <Route path="content" element={<FinancialBentoGrid title="Savings Goals" content={savingGoalsContent} />} />
+          <Route path="content" element={<FinancialBentoGridS title="Savings Goals" content={savingGoalsContent} />} />
           <Route
             path="basic-quiz"
             element={
@@ -261,7 +264,7 @@ const Budgeting = () => {
           path="debt"
           element={<ChapterLayout chapterTitle="Debt Management" />}
         >
-          <Route path="content" element={<FinancialBentoGrid title="Debt Management" content={debtManagementContent} />} />
+          <Route path="content" element={<FinancialBentoGridD title="Debt Management" content={debtManagementContent} />} />
           <Route
             path="basic-quiz"
             element={

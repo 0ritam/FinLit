@@ -4,6 +4,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@radix-ui/r
 import { ChevronsUpDown } from "lucide-react"
 import { Separator } from "../ui/separator"
 import { Link } from "react-router-dom";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
 type MobileMenuProps = {
     navMenu: MenuItem[]
@@ -51,19 +52,18 @@ const MobileMenu = ({navMenu}: MobileMenuProps) => {
         <Separator className="bg-muted-foreground/20"/>
 
         <div className="flex items-center gap-2 mt-4">
-            <Button variant="ghost" className="w-full">
-                <Link to="/signup">
-                Sign Up
-                </Link>
-                
-            </Button>
+        <SignedOut>
+        <Button>
+            <SignInButton />
+        </Button>
+    </SignedOut>
 
-            <Button className="w-full">
-                
-            <Link to="/login">
-                Sign In
-                </Link>
+    {/* Show UserButton only when user is signed in */}
+        <SignedIn>
+            <Button variant='ghost'>
+                <UserButton />
             </Button>
+        </SignedIn>
 
         </div>
     </div>
