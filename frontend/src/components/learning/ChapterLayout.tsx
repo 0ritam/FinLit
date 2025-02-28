@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import ContentHeader from "@/components/landing/ContentHeader";
+import { useProgressTracking } from "@/hooks/useProgressTracking";
 
 interface SidebarItem {
   title: string;
@@ -25,11 +26,14 @@ const customStyles = {
   `,
   icon: "text-xl",
   divider: "h-0.5 bg-n-6 mx-auto my-2",
-  mainContent: "flex-1 bg-background/70 rounded-2xl p-6 shadow-lg border border-n-6 min-h-[calc(100vh-4rem)]"
+  mainContent: "flex-1 bg-background/70 rounded-2xl p-6 shadow-lg border border-n-6 min-h-[calc(100vh-4rem)]",
+  progressBar: "fixed bottom-0 left-0 w-full bg-gray-200 h-4",
+  progressFill: "bg-teal-500 h-4",
 };
 
 const ChapterLayout = ({ chapterTitle }: { chapterTitle: string }) => {
   const location = useLocation();
+  const { progress } = useProgressTracking();
   
   const sidebarItems: SidebarItem[] = [
     {
@@ -88,8 +92,12 @@ const ChapterLayout = ({ chapterTitle }: { chapterTitle: string }) => {
           </div>
         </div>
       </div>
+      {/* Progress Bar at Bottom */}
+      <div className={customStyles.progressBar}>
+        <div className={customStyles.progressFill} style={{ width: `${progress[chapterTitle] || 0}%` }}></div>
+      </div>
     </div>
   );
 };
 
-export default ChapterLayout; 
+export default ChapterLayout;

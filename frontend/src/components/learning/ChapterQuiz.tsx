@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useProgressTracking } from '@/hooks/useProgressTracking';
 
 interface Question {
   question: string;
@@ -15,9 +16,11 @@ interface ChapterQuizProps {
 }
 
 const ChapterQuiz = ({ title, questions, isBasic = true }: ChapterQuizProps) => {
+  const { updateProgress, progress } = useProgressTracking();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
   const handleAnswer = (index: number) => {
     setSelectedAnswer(index);
@@ -25,9 +28,14 @@ const ChapterQuiz = ({ title, questions, isBasic = true }: ChapterQuizProps) => 
   };
 
   const nextQuestion = () => {
-    setSelectedAnswer(null);
-    setShowExplanation(false);
-    setCurrentQuestion((prev) => Math.min(prev + 1, questions.length - 1));
+    if (currentQuestion + 1 === questions.length) {
+      updateProgress(title, 4, 4); // Mark quiz as completed
+      setCompleted(true);
+    } else {
+      setSelectedAnswer(null);
+      setShowExplanation(false);
+      setCurrentQuestion((prev) => Math.min(prev + 1, questions.length - 1));
+    }
   };
 
   return (
@@ -75,13 +83,18 @@ const ChapterQuiz = ({ title, questions, isBasic = true }: ChapterQuizProps) => 
               onClick={nextQuestion}
               className="mt-4 px-6 py-2 bg-color-1 text-n-1 rounded-lg hover:bg-color-1/90 transition-all"
             >
-              Next Question
+              {currentQuestion + 1 === questions.length ? 'Finish Quiz' : 'Next Question'}
             </button>
           </motion.div>
         )}
+      </div>
+
+      {/* Progress Bar at Bottom */}
+      <div className="fixed bottom-0 left-0 w-full bg-gray-200 h-4">
+        <div className="bg-teal-500 h-4" style={{ width: `${completed ? 100 : progress[title] || 0}%` }}></div>
       </div>
     </motion.div>
   );
 };
 
-export default ChapterQuiz; 
+export default ChapterQuiz;

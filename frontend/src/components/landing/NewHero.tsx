@@ -46,7 +46,7 @@ const NewHero = () => {
 
   const handleStart = () => {
     if (isSignedIn) {
-      navigate("/dashboard"); 
+      navigate("/home"); 
     } else {
       redirectToSignUp(); 
     }
