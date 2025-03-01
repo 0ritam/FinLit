@@ -60,6 +60,22 @@ const ModuleSelection = () => {
             >
               Navigate through different financial topics and gain expertise.
             </motion.p>
+            <motion.div
+                      className="absolute bg-primary inset-5 blur-[40px] -z-10"
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{
+                        duration: 2,
+                        delay: 0.5,
+                        ease: "backInOut",
+                      }}
+                    ></motion.div>
+                    <motion.div
+                      className="absolute inset-0 bg-primary blur-[60px] scale-y-75 scale-x-125 rounded-full -z-10"
+                      initial={{ scale: 0.4, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ duration: 2, delay: 1.5, ease: "backOut" }}
+                    ></motion.div>
           </div>
         </div>
 

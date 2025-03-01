@@ -28,6 +28,7 @@ import {
 } from "@/data/budgeting/debtManag";
 import ContentHeader from "@/components/landing/ContentHeader";
 import NewFooter from "@/components/landing/NewFooter";
+import { useProgressTracking } from "@/hooks/useProgressTracking";
 
 const chapters = [
   {
@@ -73,6 +74,8 @@ const customStyles = {
 };
 
 const Budgeting = () => {
+  const { progress } = useProgressTracking();
+
   return (
     <>
       <Routes>
@@ -148,7 +151,9 @@ const Budgeting = () => {
                         transition={{ duration: 0.5, delay: 0.1 * index }}
                       >
                         <div className={customStyles.chapterMarker}>
-                          <span className={customStyles.chapterCross}>×</span>
+                          <span className={customStyles.chapterCross}>
+                            {progress[chapter.title]?.basicQuiz && progress[chapter.title]?.practiceQuiz ? '✔' : '×'}
+                          </span>
                         </div>
                         <Link to={chapter.path} className="flex-1">
                           <div className={customStyles.chapterContent}>
@@ -200,7 +205,8 @@ const Budgeting = () => {
               <ChapterQuiz
                 title="Practice Scenarios"
                 questions={budgetingPracticeQuiz}
-                isBasic={true}
+                isBasic={false}
+                
               />
             }
           />
