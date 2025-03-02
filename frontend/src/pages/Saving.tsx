@@ -3,16 +3,22 @@ import NewFooter from "@/components/landing/NewFooter";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ChapterLayout from '@/components/learning/ChapterLayout';
-// import ChapterContent from '@/components/learning/ChapterContent';
 import ChapterQuiz from '@/components/learning/ChapterQuiz';
 import { savingBasicsContent, savingBasicsQuiz, savingPracticeQuiz } from "@/data/saving/basics";
 import { Routes, Route } from "react-router-dom";
+import {FinancialBentoGrid1 }from "@/components/learning/SavingContent/SavingBasic";
+import {FinancialBentoGrid2} from "@/components/learning/SavingContent/HighSaves";
+import { smartSavingBasicsContent, smartSavingStrategiesPracticeQuiz, smartSavingStrategiesQuiz } from "@/data/saving/savestrat";
+import {FinancialBentoGrid3} from "@/components/learning/SavingContent/Emergency";
+import { emergencyBasicsContent, emergencyFundPracticeQuiz, emergencyFundQuiz } from "@/data/saving/emergency";
+import { highYieldContent, highYieldSavingsPracticeQuiz, highYieldSavingsQuiz } from "@/data/saving/highsaves";
+import {FinancialBentoGrid4} from "@/components/learning/SavingContent/Strategy";
 
 const chapters = [
   {
     title: "Saving Fundamentals",
     description: "Learn the basic principles of effective saving",
-    path: "/saving/basics"
+    path: "/saving/basics-save"
   },
   {
     title: "Smart Saving Strategies",
@@ -28,11 +34,6 @@ const chapters = [
     title: "High-Yield Savings",
     description: "Explore options to earn more from your savings",
     path: "/saving/high-yield"
-  },
-  {
-    title: "Automated Saving",
-    description: "Set up systems for consistent and effortless saving",
-    path: "/saving/automation"
   }
 ];
 
@@ -134,10 +135,112 @@ const Saving = () => {
           <NewFooter />
         </div>
       } />
-      <Route path="basics" element={<ChapterLayout chapterTitle="Saving Basics" />}>
-        {/* <Route path="content" element={<ChapterContent title="Saving Basics" content={savingBasicsContent} />} /> */}
-        <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={savingBasicsQuiz} isBasic={true} />} />
-        <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={savingPracticeQuiz} isBasic={false} />} />
+      <Route
+        path="basics-save"
+        element={<ChapterLayout chapterTitle="Basics of Savings" />}
+      >
+        <Route path="content" element={<FinancialBentoGrid1 title="Investment Basics" content={savingBasicsContent} />} />
+        <Route
+          path="basic-quiz"
+          element={
+            <ChapterQuiz
+              title="Basic Concepts Quiz"
+              questions={savingBasicsQuiz}
+              isBasic={true}
+            />
+          }
+        />
+        <Route
+          path="practice-quiz"
+          element={
+            <ChapterQuiz
+              title="Practice Scenarios"
+              questions={savingPracticeQuiz}
+              isBasic={false}
+            />
+          }
+        />
+      </Route>
+
+      <Route
+        path="strategies"
+        element={<ChapterLayout chapterTitle="Smart Saving Strategies" />}
+      >
+        <Route path="content" element={<FinancialBentoGrid4 title="Smart Saving Strategies" content={smartSavingBasicsContent} />} />
+        <Route
+          path="basic-quiz"
+          element={
+            <ChapterQuiz
+              title="Basic Concepts Quiz"
+              questions={smartSavingStrategiesQuiz}
+              isBasic={true}
+            />
+          }
+        />
+        <Route
+          path="practice-quiz"
+          element={
+            <ChapterQuiz
+              title="Practice Scenarios"
+              questions={smartSavingStrategiesPracticeQuiz}
+              isBasic={false}
+            />
+          }
+        />
+      </Route>
+
+      <Route
+        path="emergency-fund"
+        element={<ChapterLayout chapterTitle="Eemergency Fund" />}
+      >
+        <Route path="content" element={<FinancialBentoGrid3 title="Investment Basics" content={emergencyBasicsContent} />} />
+        <Route
+          path="basic-quiz"
+          element={
+            <ChapterQuiz
+              title="Basic Concepts Quiz"
+              questions={emergencyFundQuiz}
+              isBasic={true}
+            />
+          }
+        />
+        <Route
+          path="practice-quiz"
+          element={
+            <ChapterQuiz
+              title="Practice Scenarios"
+              questions={emergencyFundPracticeQuiz}
+              isBasic={false}
+            />
+          }
+        />
+      </Route>
+
+      <Route
+        path="high-yield"
+        element={<ChapterLayout chapterTitle="High-Yield Savings" />}
+      >
+        <Route path="content" element={<FinancialBentoGrid2 title="High-Yield Savings" content={highYieldContent} />} />
+        <Route
+          path="basic-quiz"
+          element={
+            <ChapterQuiz
+              title="Basic Concepts Quiz"
+              questions={highYieldSavingsQuiz}
+              isBasic={true}
+            />
+          }
+        />
+        <Route
+          path="practice-quiz"
+          element={
+            <ChapterQuiz
+              title="Practice Scenarios"
+              questions={highYieldSavingsPracticeQuiz}
+              isBasic={false}
+            />
+          }
+        />
       </Route>
     </Routes>
   );
