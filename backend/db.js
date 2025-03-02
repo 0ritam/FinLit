@@ -9,14 +9,38 @@ const userSchema = new mongoose.Schema({
     unique:true,
     
   },
-  firstName: {
-    type: String
+  email: {
+    type: String,
+    required: true,
+    unique: true
   },
   lastName: {
     type: String
   },
-  
-}, { timestamps: true });
+  attendance: [{
+    date: { type: Date, required: true },
+    status: {
+      type: String,
+      enum: ['presented', 'absent'],
+      required: true
+    }
+  }]
+});
+
+// Basics Quiz Schema
+const BasicsQuizSchema = new mongoose.Schema({
+  question: { type: String, required: true },
+  options: [{ type: String, required: true }],
+  answer: { type: String, required: true }
+});
+
+// Practice Quiz Schema
+const PracticeQuizSchema = new mongoose.Schema({
+  question: { type: String, required: true },
+  options: [{ type: String, required: true }],
+  correctAnswer: { type: Number, required: true },
+  explanation: { type: String, required: true }
+});
 
 // Section Schema
 const sectionSchema = new mongoose.Schema({
@@ -28,40 +52,22 @@ const sectionSchema = new mongoose.Schema({
 const ContentSchema = new mongoose.Schema({
   title: { type: String, required: true },
   moduleId: { type: mongoose.Schema.Types.ObjectId, ref: 'Module', required: true },
-  sections: [sectionSchema]
+  sections: [sectionSchema],
+  basic: BasicsQuizSchema,
+  practical: PracticeQuizSchema
 });
 
-// Module Schema
+// Module Schema (Updated for user progress tracking)
 const ModuleSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  chapters: [{
-    type: mongoose.Schema.Types.ObjectId, ref: 'Chapter'
+  chapters: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Chapter' }],
+  
+  // User progress tracking
+  progress: [{
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    completedChapters: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Chapter' }], // Track completed chapters
+    progressPercentage: { type: Number, default: 0 } // Store progress percentage
   }]
-});
-
-// Basics Quiz Schema
-const BasicsQuizSchema = new mongoose.Schema({
-  question: { type: String, required: true },
-  options: [
-    {
-      type: String,
-      required: true
-    }
-  ],
-  answer: { type: String, required: true }
-});
-
-// Practice Quiz Schema
-const PracticeQuizSchema = new mongoose.Schema({
-  question: { type: String, required: true },
-  options: [
-    {
-      type: String,
-      required: true
-    }
-  ],
-  correctAnswer: { type: Number, required: true },
-  explanation: { type: String, required: true }
 });
 
 // Models
@@ -74,10 +80,10 @@ const PracticeQuiz = mongoose.model('PracticeQuiz', PracticeQuizSchema);
 
 // Initial modules
 const initialModules = [
-  { name: 'Investing', description: 'Learn the basics of investing, stocks, bonds, and portfolios.' },
-  { name: 'Savings', description: 'Understand how to save effectively and the importance of financial security.' },
-  { name: 'Budgeting', description: 'Master the art of budgeting for managing personal finances.' },
-  { name: 'Fraud Prevention', description: 'Learn how to protect yourself from financial fraud and scams.' }
+  { name: 'Investing' },
+  { name: 'Savings' },
+  { name: 'Budgeting' },
+  { name: 'Fraud Prevention' }
 ];
 
 // Function to initialize modules
