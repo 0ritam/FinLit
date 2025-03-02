@@ -1,10 +1,11 @@
 import { ReactLenis, useLenis } from 'lenis/react'
-import Navigation from "@/components/landing/Navigation";
-import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import NewHero from "@/components/landing/NewHero";
 import Brand from '@/components/landing/Brand';
 import NewFeatures from '@/components/landing/NewFeatures';
+import Review from '@/components/landing/Review';
+import Cta from '@/components/landing/Cta';
+import NewFooter from '@/components/landing/NewFooter';
 
 const Index = () => {
   return (
@@ -14,7 +15,9 @@ const Index = () => {
       <NewHero/>
       <Brand/>
       <NewFeatures/>
-      <Footer />
+      <Review/>
+      <Cta/>
+      <NewFooter/>
     </div>
     </ReactLenis>
     

@@ -1,16 +1,34 @@
-import Navigation from "@/components/landing/Navigation1";
-import Footer from "@/components/landing/Footer";
 import { motion } from "framer-motion";
 import { Link, Routes, Route } from "react-router-dom";
-import ChapterLayout from '@/components/learning/ChapterLayout';
-import ChapterContent from '@/components/learning/ChapterContent';
-import ChapterQuiz from '@/components/learning/ChapterQuiz';
-import { budgetingBasicsContent, budgetingBasicsQuiz, budgetingPracticeQuiz } from "@/data/budgeting/basics";
-import { expenseTrackingContent, expenseTrackingQuiz, expenseTrackingPracticeQuiz } from "@/data/budgeting/expense";
-import { savingGoalsContent, savingGoalsQuiz, savingGoalsPracticeQuiz } from "@/data/budgeting/savingGoals";
-import { debtManagementContent, debtManagementQuiz, debtManagementPracticeQuiz } from "@/data/budgeting/debtManag";
-import { emergencyFundsContent, emergencyFundsQuiz, emergencyFundsPracticeQuiz } from "@/data/budgeting/emergency";
-import Header from "@/components/landing/Header";
+import ChapterLayout from "@/components/learning/ChapterLayout";
+import { FinancialBentoGrid } from "@/components/learning/BudgetContent/BasicCont";
+import { FinancialBentoGridD } from "@/components/learning/BudgetContent/DebtCont";
+import { FinancialBentoGridE } from "@/components/learning/BudgetContent/ExpenseCont";
+import { FinancialBentoGridS } from "@/components/learning/BudgetContent/SavingGoal";
+import ChapterQuiz from "@/components/learning/ChapterQuiz";
+import {
+  budgetingBasicsContent,
+  budgetingBasicsQuiz,
+  budgetingPracticeQuiz,
+} from "@/data/budgeting/basics";
+import {
+  expenseTrackingContent,
+  expenseTrackingQuiz,
+  expenseTrackingPracticeQuiz,
+} from "@/data/budgeting/expense";
+import {
+  savingGoalsContent,
+  savingGoalsQuiz,
+  savingGoalsPracticeQuiz,
+} from "@/data/budgeting/savingGoals";
+import {
+  debtManagementContent,
+  debtManagementQuiz,
+  debtManagementPracticeQuiz,
+} from "@/data/budgeting/debtManag";
+import ContentHeader from "@/components/landing/ContentHeader";
+import NewFooter from "@/components/landing/NewFooter";
+import { useProgressTracking } from "@/hooks/useProgressTracking";
 
 const chapters = [
   {
@@ -33,31 +51,31 @@ const chapters = [
     description: "Strategies for managing and reducing your debt effectively",
     path: "/budgeting/debt",
   },
-  {
-    title: "Emergency Fund",
-    description: "Learn how to build and maintain your emergency savings",
-    path: "/budgeting/emergency-fund",
-  },
 ];
 
 const customStyles = {
   container: "container mx-auto px-4 py-12 md:py-24 realtive",
-  banner: "bg-background backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8",
+  banner:
+    "bg-background backdrop-blur-sm p-8 rounded-xl mb-16 shadow-lg mt-8 mt-32",
   bannerHeader: "text-center mb-12",
-  bannerTitle: "heading-xl mb-4 text-muted-foreground",
+  bannerTitle: "heading-xl mb-4 text-white",
   bannerSubtitle: "text-xl text-muted max-w-2xl mx-auto",
   chaptersContainer: "max-w-3xl mx-auto relative ",
   chaptersList: "relative",
   verticalLine: "absolute left-4 top-0 bottom-0 w-0.5 bg-popover-foreground",
   chapterItem: "flex items-center gap-8 mb-8 group",
-  chapterMarker: "relative z-10 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center",
+  chapterMarker:
+    "relative z-10 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center",
   chapterCross: "text-muted-foreground font-bold text-lg",
-  chapterContent: "flex-1 bg-card/60 p-6 rounded-xl shadow-sm border border-neutral-200 hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
+  chapterContent:
+    "flex-1 bg-card/80 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all relative z-10 hover:shadow-primary/30",
   chapterTitle: "text-xl font-semibold mb-2 text-white",
   chapterDescription: "text-muted-foreground",
 };
 
 const Budgeting = () => {
+  const { progress } = useProgressTracking();
+
   return (
     <>
       <Routes>
@@ -66,7 +84,7 @@ const Budgeting = () => {
           element={
             <div className="min-h-screen bg-background">
               {/* <Navigation /> */}
-              <Header/>
+              <ContentHeader />
               <div className={customStyles.container}>
                 {/* Add glow effects */}
                 <motion.div
@@ -99,21 +117,26 @@ const Budgeting = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                      Learn essential budgeting skills to take control of your finances
+                      Learn essential budgeting skills to take control of your
+                      finances
                     </motion.p>
 
                     <motion.div
-            className="absolute bg-primary2 inset-5 blur-[90px] -z-10"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, delay: 0.5, ease: "backInOut" }}
-          ></motion.div>
-          <motion.div
-            className="absolute inset-0 bg-primary2 blur-[120px] scale-y-75 scale-x-125 rounded-full -z-10"
-            initial={{ scale: 0.4, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, delay: 1.5, ease: "backOut" }}
-          ></motion.div>
+                      className="absolute bg-primary2 inset-5 blur-[60px] -z-10"
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{
+                        duration: 2,
+                        delay: 0.5,
+                        ease: "backInOut",
+                      }}
+                    ></motion.div>
+                    <motion.div
+                      className="absolute inset-0 bg-primary2 blur-[80px] scale-y-75 scale-x-125 rounded-full -z-10"
+                      initial={{ scale: 0.4, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ duration: 2, delay: 1.5, ease: "backOut" }}
+                    ></motion.div>
                   </div>
                 </div>
                 <div className={customStyles.chaptersContainer}>
@@ -128,12 +151,18 @@ const Budgeting = () => {
                         transition={{ duration: 0.5, delay: 0.1 * index }}
                       >
                         <div className={customStyles.chapterMarker}>
-                          <span className={customStyles.chapterCross}>×</span>
+                          <span className={customStyles.chapterCross}>
+                            {progress[chapter.title]?.basicQuiz && progress[chapter.title]?.practiceQuiz ? '✔' : '×'}
+                          </span>
                         </div>
                         <Link to={chapter.path} className="flex-1">
                           <div className={customStyles.chapterContent}>
-                            <h3 className={customStyles.chapterTitle}>{chapter.title}</h3>
-                            <p className={customStyles.chapterDescription}>{chapter.description}</p>
+                            <h3 className={customStyles.chapterTitle}>
+                              {chapter.title}
+                            </h3>
+                            <p className={customStyles.chapterDescription}>
+                              {chapter.description}
+                            </p>
                           </div>
                         </Link>
                       </motion.div>
@@ -141,40 +170,127 @@ const Budgeting = () => {
                   </div>
                 </div>
               </div>
-              <Footer />
+              <NewFooter />
             </div>
           }
         />
 
         {/* Modules */}
-        <Route path="basics" element={<ChapterLayout chapterTitle="Basics of Budgeting" />}>
-          <Route path="content" element={<ChapterContent title="Basics of Budgeting" content={budgetingBasicsContent} />} />
-          <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={budgetingBasicsQuiz} isBasic={true} />} />
-          <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={budgetingPracticeQuiz} isBasic={false} />} />
+        <Route
+          path="basics"
+          element={<ChapterLayout chapterTitle="Basics of Budgeting" />}
+        >
+          <Route
+            path="content"
+            element={
+              <FinancialBentoGrid
+                title="Basics of Budgeting"
+                content={budgetingBasicsContent}
+              />
+            }
+          />
+          <Route
+            path="basic-quiz"
+            element={
+              <ChapterQuiz
+                title="Basic Concepts Quiz"
+                questions={budgetingBasicsQuiz}
+                isBasic={true}
+              />
+            }
+          />
+          <Route
+            path="practice-quiz"
+            element={
+              <ChapterQuiz
+                title="Practice Scenarios"
+                questions={budgetingPracticeQuiz}
+                isBasic={false}
+                
+              />
+            }
+          />
         </Route>
 
-        <Route path="tracking" element={<ChapterLayout chapterTitle="Expense Tracking" />}>
-          <Route path="content" element={<ChapterContent title="Expense Tracking" content={expenseTrackingContent} />} />
-          <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={expenseTrackingQuiz} isBasic={true} />} />
-          <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={expenseTrackingPracticeQuiz} isBasic={false} />} />
+        <Route
+          path="tracking"
+          element={<ChapterLayout chapterTitle="Expense Tracking" />}
+        >
+          <Route path="content" element={<FinancialBentoGridE title="Expense Tracking" content={expenseTrackingContent} />} />
+          <Route
+            path="basic-quiz"
+            element={
+              <ChapterQuiz
+                title="Basic Concepts Quiz"
+                questions={expenseTrackingQuiz}
+                isBasic={true}
+              />
+            }
+          />
+          <Route
+            path="practice-quiz"
+            element={
+              <ChapterQuiz
+                title="Practice Scenarios"
+                questions={expenseTrackingPracticeQuiz}
+                isBasic={false}
+              />
+            }
+          />
         </Route>
 
-        <Route path="goals" element={<ChapterLayout chapterTitle="Savings Goals" />}>
-          <Route path="content" element={<ChapterContent title="Savings Goals" content={savingGoalsContent} />} />
-          <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={savingGoalsQuiz} isBasic={true} />} />
-          <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={savingGoalsPracticeQuiz} isBasic={false} />} />
+        <Route
+          path="goals"
+          element={<ChapterLayout chapterTitle="Savings Goals" />}
+        >
+          <Route path="content" element={<FinancialBentoGridS title="Savings Goals" content={savingGoalsContent} />} />
+          <Route
+            path="basic-quiz"
+            element={
+              <ChapterQuiz
+                title="Basic Concepts Quiz"
+                questions={savingGoalsQuiz}
+                isBasic={true}
+              />
+            }
+          />
+          <Route
+            path="practice-quiz"
+            element={
+              <ChapterQuiz
+                title="Practice Scenarios"
+                questions={savingGoalsPracticeQuiz}
+                isBasic={false}
+              />
+            }
+          />
         </Route>
 
-        <Route path="debt" element={<ChapterLayout chapterTitle="Debt Management" />}>
-          <Route path="content" element={<ChapterContent title="Debt Management" content={debtManagementContent} />} />
-          <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={debtManagementQuiz} isBasic={true} />} />
-          <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={debtManagementPracticeQuiz} isBasic={false} />} />
-        </Route>
-
-        <Route path="emergency-fund" element={<ChapterLayout chapterTitle="Emergency Funds" />}>
-          <Route path="content" element={<ChapterContent title="Emergency Funds" content={emergencyFundsContent} />} />
-          <Route path="basic-quiz" element={<ChapterQuiz title="Basic Concepts Quiz" questions={emergencyFundsQuiz} isBasic={true} />} />
-          <Route path="practice-quiz" element={<ChapterQuiz title="Practice Scenarios" questions={emergencyFundsPracticeQuiz} isBasic={false} />} />
+        <Route
+          path="debt"
+          element={<ChapterLayout chapterTitle="Debt Management" />}
+        >
+          <Route path="content" element={<FinancialBentoGridD title="Debt Management" content={debtManagementContent} />} />
+          <Route
+            path="basic-quiz"
+            element={
+              <ChapterQuiz
+                title="Basic Concepts Quiz"
+                questions={debtManagementQuiz}
+                isBasic={true}
+              />
+            }
+          />
+          <Route
+            path="practice-quiz"
+            element={
+              <ChapterQuiz
+                title="Practice Scenarios"
+                questions={debtManagementPracticeQuiz}
+                isBasic={false}
+              />
+            }
+          />
         </Route>
       </Routes>
     </>

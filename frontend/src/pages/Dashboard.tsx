@@ -1,7 +1,8 @@
-import Navigation from '../components/landing/Navigation1';
+import ContentHeader from "@/components/landing/ContentHeader";
+
 import '../components/landing/Dashboard.css';
 import { useEffect, useState } from 'react';
-import Footer from '@/components/landing/Footer';
+
 import Header from "@/components/landing/Header";
 // Add additional inline styles to preserve your CSS structure while adding dark theme
 const additionalStyles = `
@@ -226,7 +227,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        
       </div>
     </>
   );
