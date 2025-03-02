@@ -1,6 +1,6 @@
 const express = require('express')
 const zod = require('zod')
-const {User} = require('../db')
+const { User, Module } = require('../db'); 
 const jwt = require('jsonwebtoken')
 const authMiddlewar = require('../middleware')
 
@@ -99,5 +99,50 @@ UserRoute.post("/signin", async (req, res)=>{
     })
     return;
 })
+UserRoute.get("/attendance", async (req, res) => {
+    try {
+        const userId = "67987b2e58139440f4d67be1"; // Replace with dynamic user ID from auth middleware
+        const todayDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+
+        // Fetch user details including attendance
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ msg: "User not found" });
+        }
+
+        // Check if today's date is already recorded in attendance
+        const alreadyMarked = user.attendance.some(
+            record => record.date.toISOString().split('T')[0] === todayDate
+        );
+
+        if (!alreadyMarked) {
+            // Mark today as presented
+            user.attendance.push({ date: new Date(), status: "presented" });
+            await user.save();
+        }
+
+        // Fetch module progress
+        const modules = await Module.find({ "progress.userId": userId });
+
+        // Format the progress response
+        const moduleProgress = modules.map((module) => {
+            const userProgress = module.progress.find((p) => p.userId.toString() === userId);
+            return {
+                module: module.name,
+                progress: userProgress ? userProgress.progressPercentage : 0, // Default 0 if no progress found
+            };
+        });
+
+        res.status(200).json({
+            msg: "User attendance and details fetched successfully",
+            fullname: user.fullname,
+            attendance: user.attendance,
+            progress: moduleProgress
+        });
+    } catch (error) {
+        res.status(500).json({ msg: "Error fetching user details", error: error.message });
+    }
+});
+
 
 module.exports = UserRoute
