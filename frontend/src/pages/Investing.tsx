@@ -23,11 +23,6 @@ const chapters = [
     path: "/investing/stocks",
   },
   {
-    title: "Portfolio Management",
-    description: "Learn to build and manage a diversified investment portfolio",
-    path: "/investing/portfolio",
-  },
-  {
     title: "Risk Management",
     description: "Strategies to assess and manage investment risks effectively",
     path: "/investing/risk",
