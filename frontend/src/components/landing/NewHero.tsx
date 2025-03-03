@@ -13,7 +13,7 @@ import { useRef } from "react";
 import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/magicui/grid-pattern";
 import { useAuth, useClerk } from "@clerk/clerk-react";
-
+import { TypingAnimation } from "@/components/magicui/typing-animation";
 const heroVariant: Variants = {
   start: {},
   end: {
@@ -99,7 +99,9 @@ const NewHero = () => {
             variants={heroChildVariant}
             className=" text-white text-4xl font-semibold !leading-tight mb-4 md:text-5xl md:mb-5 lg:text-6xl mix-blend-normal"
           >
-            {heroData.sectionTitle}
+            <TypingAnimation>
+              {heroData.sectionTitle}
+            </TypingAnimation>
             <span className="relative isolate ms-2">
               {heroData.decoTitle}
 

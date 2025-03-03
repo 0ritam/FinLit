@@ -169,10 +169,11 @@ const Dashboard = () => {
 
   return (
     <>
+      
       <style>{additionalStyles}</style>
-      <div className="min-h-screen bg-gray-900">
-      <Header/>
-        <div className='main max-w-6xl min-h-screen bg-gray-800 p-5 rounded-xl'>
+      <div className="min-h-screen bg-background">
+      <ContentHeader/>
+        <div className='main max-w-6xl min-h-screen bg-background p-5 rounded-xl'>
           <h1 className="intro">Welcome back, {fullname}</h1>
           <div className="mt-4 p-4 border border-gray-700 rounded-2xl bg-gray-800/80 flex flex-col sm:flex-row gap-4">
             
