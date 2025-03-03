@@ -11,7 +11,7 @@ import Saving from "./pages/Saving";
 import Dashboard from "./pages/Dashboard";
 import Fraud from "./pages/FraudPrevention";
 import ProtectedRoute from "./lib/protected-routes";
-
+import FraudDetection  from "./pages/FraudDetection";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -67,6 +67,14 @@ const App = () => (
             element={
               <ProtectedRoute>
                 <Fraud />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/fraud-detection"
+            element={
+              <ProtectedRoute>
+                <FraudDetection />
               </ProtectedRoute>
             }
           />

@@ -28,6 +28,7 @@ const Navigation = () => {
     { path: "/investing", label: "Investing" },
     { path: "/saving", label: "Saving" },
     { path: "/fraud-prevention", label: "Fraud Prevention" },
+    { path: "/fraud-detection", label: "Fraud Detection" },
   ];
 
   const isDashboard = location.pathname === "/dashboard";
