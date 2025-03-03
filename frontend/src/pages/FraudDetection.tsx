@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import ContentHeader from "@/components/landing/ContentHeader";
 const FileUploadPage = () => {
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -90,7 +90,9 @@ const FileUploadPage = () => {
   };
 
   return (
+    
     <div className={customStyles.container}>
+      <ContentHeader/>
       {/* Add glow effects similar to the provided example */}
       <motion.div
         className="fixed top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 blur-[120px] -z-10"
