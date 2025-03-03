@@ -9,13 +9,34 @@ import {
   investingBasicsQuiz,
   investingPracticeQuiz,
 } from "@/data/investing/basics";
+import {
+  riskBasicsContent,
+  riskBasicsQuiz,
+  riskPracticeQuiz,
+} from "@/data/investing/risk";
+import {
+  retireBasicsContent,
+  retireBasicsQuiz,
+  retirePracticeQuiz
+} from "@/data/investing/retire";
+import {
+  stockBasicsContent,
+  stockMarketPracticeQuiz,
+  stockMarketQuiz
+} from "@/data/investing/stock";
+
 import { Routes, Route } from "react-router-dom";
+import {FinancialBentoGridI} from "@/components/learning/InvestContent/BasicInt";
+import {FinancialBentoGridRi} from "@/components/learning/InvestContent/Risk";
+import {FinancialBentoGridRe} from "@/components/learning/InvestContent/Retire";
+import {FinancialBentoGridSt} from "@/components/learning/InvestContent/Stock";
+
 
 const chapters = [
   {
     title: "Investment Basics",
     description: "Learn the fundamentals of investing and market principles",
-    path: "/investing/basics",
+    path: "/investing/basicsin",
   },
   {
     title: "Stock Market",
@@ -143,11 +164,12 @@ const Investing = () => {
           </div>
         }
       />
+
       <Route
-        path="basics"
+        path="basicsin"
         element={<ChapterLayout chapterTitle="Investment Basics" />}
       >
-        {/* <Route path="content" element={<FinancialBentoGridD title="Investment Basics" content={investingBasicsContent} />} /> */}
+        <Route path="content" element={<FinancialBentoGridI title="Investment Basics" content={investingBasicsContent} />} />
         <Route
           path="basic-quiz"
           element={
@@ -169,6 +191,87 @@ const Investing = () => {
           }
         />
       </Route>
+       
+      <Route
+          path="risk"
+          element={<ChapterLayout chapterTitle="Risk Management" />}
+        >
+          <Route path="content" element={<FinancialBentoGridRi title="Risk Management" content={riskBasicsContent} />} />
+          <Route
+            path="basic-quiz"
+            element={
+              <ChapterQuiz
+                title="Basic Concepts Quiz"
+                questions={riskBasicsQuiz}
+                isBasic={true}
+              />
+            }
+          />
+          <Route
+            path="practice-quiz"
+            element={
+              <ChapterQuiz
+                title="Practice Scenarios"
+                questions={riskPracticeQuiz}
+                isBasic={false}
+              />
+            }
+          />
+        </Route>
+
+        <Route
+          path="retirement"
+          element={<ChapterLayout chapterTitle="Retiremennt Planning" />}
+        >
+          <Route path="content" element={<FinancialBentoGridRe title="Retiremennt Planning" content={retireBasicsContent} />} />
+          <Route
+            path="basic-quiz"
+            element={
+              <ChapterQuiz
+                title="Basic Concepts Quiz"
+                questions={retireBasicsQuiz}
+                isBasic={true}
+              />
+            }
+          />
+          <Route
+            path="practice-quiz"
+            element={
+              <ChapterQuiz
+                title="Practice Scenarios"
+                questions={retirePracticeQuiz}
+                isBasic={false}
+              />
+            }
+          />
+        </Route>
+
+        <Route
+          path="stocks"
+          element={<ChapterLayout chapterTitle="Stock Market Basics" />}
+        >
+          <Route path="content" element={<FinancialBentoGridSt title="Stock Market Basics" content={stockBasicsContent} />} />
+          <Route
+            path="basic-quiz"
+            element={
+              <ChapterQuiz
+                title="Basic Concepts Quiz"
+                questions={stockMarketQuiz}
+                isBasic={true}
+              />
+            }
+          />
+          <Route
+            path="practice-quiz"
+            element={
+              <ChapterQuiz
+                title="Practice Scenarios"
+                questions={stockMarketPracticeQuiz}
+                isBasic={false}
+              />
+            }
+          />
+        </Route>
     </Routes>
   );
 };

@@ -1,4 +1,6 @@
 export const savingBasicsContent = {
+  title: "Saving Basics - Learn How to Build Your Financial Future",
+  description: "Understanding the importance of saving and implementing effective saving strategies can help secure your financial future. Learn the key principles of saving money wisely.",
   sections: [
     {
       heading: "What is Saving?",
@@ -21,7 +23,13 @@ export const savingBasicsContent = {
         "Set specific savings goals and automate your savings to make the process easier..."
       ]
     },
-    // More sections...
+    {
+      heading: "Types of Savings Accounts",
+      paragraphs: [
+        "There are various types of savings accounts, including regular savings accounts, high-yield savings accounts, and money market accounts...",
+        "Each type offers different benefits, such as higher interest rates or easier access to funds..."
+      ]
+    }
   ]
 };
 
@@ -56,7 +64,56 @@ export const savingBasicsQuiz = [
     ],
     answer: "Create a budget"
   },
-  // More questions...
+  {
+    question: "Which type of savings account typically offers the highest interest rates?",
+    options: [
+      "Regular savings account",
+      "High-yield savings account",
+      "Checking account",
+      "Certificate of deposit (CD)"
+    ],
+    answer: "High-yield savings account"
+  },
+  {
+    question: "What is an emergency fund?",
+    options: [
+      "Money set aside for non-essential expenses",
+      "A savings account for unexpected financial situations",
+      "A fund used only for vacations",
+      "A type of investment account"
+    ],
+    answer: "A savings account for unexpected financial situations"
+  },
+  {
+    question: "How much should you aim to have in an emergency fund?",
+    options: [
+      "One month’s worth of expenses",
+      "Three to six months’ worth of expenses",
+      "A year’s worth of expenses",
+      "Any amount is sufficient"
+    ],
+    answer: "Three to six months’ worth of expenses"
+  },
+  {
+    question: "Which strategy can help you save money effectively?",
+    options: [
+      "Automating savings contributions",
+      "Spending first and saving what remains",
+      "Relying on credit for emergencies",
+      "Only saving when you have extra money"
+    ],
+    answer: "Automating savings contributions"
+  },
+  {
+    question: "What is the benefit of compound interest in saving?",
+    options: [
+      "Your money earns interest on both the initial deposit and previously earned interest",
+      "It guarantees no financial risks",
+      "It only applies to retirement savings",
+      "It means your money loses value over time"
+    ],
+    answer: "Your money earns interest on both the initial deposit and previously earned interest"
+  }
 ];
 
 export const savingPracticeQuiz = [
@@ -65,5 +122,11 @@ export const savingPracticeQuiz = [
     options: ["$2,400", "$2,438", "$2,472", "$2,500"],
     correctAnswer: 1,
     explanation: "Monthly savings of $200 × 12 = $2,400, plus approximately $38 in interest = $2,438"
-  }
+  },
+  {
+    question: "If you deposit $1,000 in a savings account with a 5% annual interest rate, how much will you have after 2 years (compounded annually)?",
+    options: ["$1,050", "$1,102.50", "$1,200", "$1,500"],
+    correctAnswer: 1,
+    explanation: "$1,000 × (1.05)^2 = $1,102.50, applying compound interest over 2 years."
+  } 
 ];
