@@ -1,167 +1,151 @@
-export const stockBasicsContent = {
-    title: "Fraud Recognition - Learn How to Recognize Frauds",
-    description: "Understanding and identifying fraudulent activities can help protect your finances and personal information. Learn key fraud patterns and how to avoid them.",
-    sections: [
-      {
-        heading: "What is Fraud Recognition?",
-        paragraphs: [
-          "Fraud recognition involves identifying deceptive activities that aim to steal money or sensitive information...",
-          "By learning to recognize fraud patterns, individuals and businesses can take proactive measures to protect themselves..."
-        ]
-      },
-      {
-        heading: "Common Signs of Fraud",
-        paragraphs: [
-          "Fraudulent activities often involve urgent requests, unrealistic promises, and attempts to obtain personal details...",
-          "Being aware of these red flags can help prevent financial losses..."
-        ]
-      },
-      {
-        heading: "How to Verify Legitimacy?",
-        paragraphs: [
-          "Always verify the source of emails, calls, and messages before taking action...",
-          "Look for official communication methods and avoid clicking on suspicious links..."
-        ]
-      },
-      {
-        heading: "Steps to Take When You Detect Fraud",
-        paragraphs: [
-          "If you suspect fraud, report it to the relevant authorities immediately...",
-          "Monitor your financial statements and secure your accounts to prevent further damage..."
-        ]
-      }
-    ]
-  };
-  
-  export const stockMarketQuiz = [
+export const advancedInvestmentStrategiesContent = {
+  title: "Advanced Investment Strategies",
+  description: "Learn sophisticated strategies to optimize investment returns, manage risks, and build long-term wealth.",
+  sections: [
     {
-      question: "What is the primary function of the stock market?",
-      options: [
-        "To provide loans to businesses",
-        "To facilitate the buying and selling of company shares",
-        "To regulate commodity prices",
-        "To control inflation"
-      ],
-      answer: "To facilitate the buying and selling of company shares"
+      heading: "What are Advanced Investment Strategies?",
+      paragraphs: [
+        "Advanced investment strategies go beyond basic investing and involve complex techniques to maximize returns and manage risks effectively.",
+        "These strategies include asset allocation, hedging, leverage, and portfolio rebalancing."
+      ]
     },
     {
-      question: "What is a common stock?",
-      options: [
-        "A stock that provides fixed dividends",
-        "A stock that grants voting rights and variable dividends",
-        "A stock that guarantees a return on investment",
-        "A bond issued by a company"
-      ],
-      answer: "A stock that grants voting rights and variable dividends"
+      heading: "Types of Advanced Investment Strategies",
+      paragraphs: [
+        "Value Investing: Investing in undervalued stocks based on fundamental analysis.",
+        "Growth Investing: Focusing on companies with high growth potential.",
+        "Momentum Investing: Buying assets that have shown strong recent performance.",
+        "Hedging and Derivatives: Using options, futures, and other financial instruments to reduce risk.",
+        "Portfolio Diversification: Spreading investments across different asset classes to minimize risk."
+      ]
     },
     {
-      question: "What does it mean when a stock price rises?",
-      options: [
-        "The company is issuing new shares",
-        "Investors are confident in the company’s future growth",
-        "The stock is about to be delisted",
-        "The company is losing value"
-      ],
-      answer: "Investors are confident in the company’s future growth"
-    },
-    {
-      question: "What is a dividend?",
-      options: [
-        "A fee paid to stockbrokers",
-        "A portion of a company’s profits distributed to shareholders",
-        "The total revenue of a company",
-        "The cost of issuing new shares"
-      ],
-      answer: "A portion of a company’s profits distributed to shareholders"
-    },
-    {
-      question: "What is the purpose of diversification in stock investing?",
-      options: [
-        "To focus investments on a single stock",
-        "To spread investments across multiple stocks to reduce risk",
-        "To increase short-term profits",
-        "To eliminate the need for research"
-      ],
-      answer: "To spread investments across multiple stocks to reduce risk"
-    },
-    {
-      question: "What is a stock index?",
-      options: [
-        "A list of all stocks in a market",
-        "A statistical measure of stock market performance",
-        "A government tax on stock investments",
-        "A measure of inflation"
-      ],
-      answer: "A statistical measure of stock market performance"
-    },
-    {
-      question: "What is the role of a stockbroker?",
-      options: [
-        "To buy and sell stocks on behalf of investors",
-        "To regulate the stock market",
-        "To provide interest on savings accounts",
-        "To issue company bonds"
-      ],
-      answer: "To buy and sell stocks on behalf of investors"
-    },
-    {
-      question: "What is a bull market?",
-      options: [
-        "A market condition where stock prices are rising",
-        "A market condition where stock prices are falling",
-        "A stagnant market with no significant changes",
-        "A government-regulated stock market"
-      ],
-      answer: "A market condition where stock prices are rising"
+      heading: "Risk Management in Advanced Strategies",
+      paragraphs: [
+        "Risk-adjusted return measures like Sharpe Ratio help investors evaluate the effectiveness of their strategies.",
+        "Using stop-loss orders, trailing stops, and proper asset allocation can help mitigate investment risks.",
+        "Understanding market cycles and economic indicators can improve decision-making."
+      ]
     }
-  ];
-  
-  export const stockMarketPracticeQuiz = [
-    {
-      question: "If you invest $1,000 in a stock that gains 10% annually, how much will it be worth after one year?",
-      options: ["$900", "$1,100", "$1,010", "$1,200"],
-      correctAnswer: 1,
-      explanation: "$1,000 × 1.10 = $1,100. This represents a 10% increase on the initial investment."
-    },
-    {
-      question: "What is the price-to-earnings (P/E) ratio used for?",
-      options: ["To measure a company’s profitability compared to its stock price",
-        "To determine a stock’s trading volume",
-        "To calculate dividend payments",
-        "To track market trends"
-      ],
-      correctAnswer: 0,
-      explanation: "The P/E ratio helps investors evaluate whether a stock is overvalued or undervalued based on earnings."
-    },
-    {
-      question: "How does short selling work?",
-      options: ["Investors buy stocks expecting them to rise in value",
-        "Investors sell borrowed stocks hoping to buy them back at a lower price",
-        "Investors hold stocks for long-term gains",
-        "Investors only invest in dividend-paying stocks"
-      ],
-      correctAnswer: 1,
-      explanation: "Short selling involves selling borrowed shares with the expectation of buying them back at a lower price for profit."
-    },
-    {
-      question: "What is a blue-chip stock?",
-      options: ["A stock in a small, high-risk company",
-        "A stock issued by a well-established, financially stable company",
-        "A penny stock with high volatility",
-        "A stock that always increases in value"
-      ],
-      correctAnswer: 1,
-      explanation: "Blue-chip stocks belong to large, stable companies with a history of reliable performance."
-    },
-    {
-      question: "Why do companies issue stocks?",
-      options: ["To raise capital for growth and expansion",
-        "To increase inflation",
-        "To reduce market volatility",
-        "To buy back their own shares"
-      ],
-      correctAnswer: 0,
-      explanation: "Companies issue stocks to raise funds for business growth, operations, and expansion."
-    }
-  ];
-  
+  ]
+};
+
+
+export const advancedInvestmentStrategiesQuiz = [
+  {
+    question: "Which of the following is a key characteristic of value investing?",
+    options: [
+      "Investing in high-growth companies",
+      "Buying stocks with low intrinsic value compared to their market price",
+      "Following recent stock market trends",
+      "Using derivatives for hedging"
+    ],
+    answer: "Buying stocks with low intrinsic value compared to their market price"
+  },
+  {
+    question: "Which strategy involves investing in companies with high revenue and earnings growth?",
+    options: ["Value investing", "Growth investing", "Momentum investing", "Hedging"],
+    answer: "Growth investing"
+  },
+  {
+    question: "Which financial instrument is commonly used for hedging investment risks?",
+    options: ["Bonds", "Stocks", "Options", "Mutual funds"],
+    answer: "Options"
+  },
+  {
+    question: "What is portfolio diversification?",
+    options: [
+      "Investing only in one type of asset",
+      "Spreading investments across multiple asset classes to reduce risk",
+      "Buying and selling stocks frequently",
+      "Investing only in government securities"
+    ],
+    answer: "Spreading investments across multiple asset classes to reduce risk"
+  },
+  {
+    question: "What is the main purpose of hedging?",
+    options: [
+      "Maximizing returns",
+      "Minimizing potential losses",
+      "Outperforming the stock market",
+      "Buying and holding assets for long-term growth"
+    ],
+    answer: "Minimizing potential losses"
+  },
+  {
+    question: "Which investment strategy involves leveraging borrowed funds to enhance returns?",
+    options: ["Diversification", "Value investing", "Leverage investing", "Growth investing"],
+    answer: "Leverage investing"
+  },
+  {
+    question: "What does asset allocation refer to?",
+    options: [
+      "Investing only in high-risk assets",
+      "Allocating investments across different asset classes based on risk tolerance",
+      "Investing all money into one stock",
+      "Avoiding stocks and investing only in fixed deposits"
+    ],
+    answer: "Allocating investments across different asset classes based on risk tolerance"
+  },
+  {
+    question: "Momentum investing relies on which key principle?",
+    options: [
+      "Buying assets that are currently undervalued",
+      "Investing only in dividend-paying stocks",
+      "Following recent market trends and investing in rising stocks",
+      "Holding investments for long-term growth"
+    ],
+    answer: "Following recent market trends and investing in rising stocks"
+  }
+];
+
+export const advancedInvestmentStrategiesPracticeQuiz = [
+  {
+    question: "If a stock is currently priced at ₹500 and has an intrinsic value of ₹700, what investment strategy does this suggest?",
+    options: ["Growth investing", "Value investing", "Momentum investing", "Day trading"],
+    correctAnswer: 1,
+    explanation: "Value investing focuses on purchasing stocks that are priced below their intrinsic value."
+  },
+  {
+    question: "An investor buys shares of a fast-growing tech company that reinvests its profits into expansion. Which strategy is being used?",
+    options: ["Value investing", "Growth investing", "Hedging", "Diversification"],
+    correctAnswer: 1,
+    explanation: "Growth investing targets companies with strong revenue and earnings growth potential."
+  },
+  {
+    question: "You invest in stocks, bonds, and real estate to minimize risk. What is this an example of?",
+    options: ["Speculative trading", "Hedging", "Diversification", "Momentum investing"],
+    correctAnswer: 2,
+    explanation: "Diversification involves spreading investments across different asset classes to reduce risk."
+  },
+  {
+    question: "A trader buys a stock that has been rapidly increasing in price over the past three months, expecting the trend to continue. What strategy is this?",
+    options: ["Value investing", "Momentum investing", "Growth investing", "Hedging"],
+    correctAnswer: 1,
+    explanation: "Momentum investing involves buying assets that have shown strong recent performance."
+  },
+  {
+    question: "A company’s stock price drops due to temporary negative news, but its fundamentals remain strong. An investor buys the stock expecting it to recover. Which strategy is being applied?",
+    options: ["Momentum investing", "Value investing", "Day trading", "Hedging"],
+    correctAnswer: 1,
+    explanation: "Value investors buy stocks when they are undervalued, expecting their price to return to their intrinsic value."
+  },
+  {
+    question: "An investor uses futures contracts to protect against a decline in stock prices. What is this an example of?",
+    options: ["Momentum investing", "Hedging", "Leverage investing", "Growth investing"],
+    correctAnswer: 1,
+    explanation: "Hedging involves using financial instruments like futures to reduce risk exposure."
+  },
+  {
+    question: "If a portfolio has 70% stocks, 20% bonds, and 10% real estate, which principle is being followed?",
+    options: ["Leverage investing", "Asset allocation", "Hedging", "Speculation"],
+    correctAnswer: 1,
+    explanation: "Asset allocation involves distributing investments across different asset classes based on risk preference."
+  },
+  {
+    question: "An investor borrows money to increase their position in a high-growth stock. What strategy is this?",
+    options: ["Leverage investing", "Value investing", "Momentum investing", "Hedging"],
+    correctAnswer: 0,
+    explanation: "Leverage investing uses borrowed funds to amplify potential returns (and risk)."
+  }
+];
