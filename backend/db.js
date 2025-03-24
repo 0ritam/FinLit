@@ -1,5 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
+const { string } = require('zod');
 
 // User Schema
 const userSchema = new mongoose.Schema({
@@ -64,7 +65,7 @@ const ModuleSchema = new mongoose.Schema({
   
   // User progress tracking
   progress: [{
-    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    userId: { type: String,  required: true },
     completedChapters: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Chapter' }], // Track completed chapters
     progressPercentage: { type: Number, default: 0 } // Store progress percentage
   }]
