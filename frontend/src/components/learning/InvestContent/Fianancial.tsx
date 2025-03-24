@@ -6,7 +6,7 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import { ExpandableCard } from "@/components/ui/expandableCard";
-import { advancedInvestmentStrategiesContent } from "@/data/investing/stock"; 
+import { financialProductsContent } from "@/data/investing/financialProducts"; 
 
 
 // Function to get the appropriate icon
@@ -36,32 +36,25 @@ interface FinancialBentoGridProps {
   };
 }
 
-export function FinancialBentoGridSt({ title, content }: FinancialBentoGridProps) {
+export function FinancialBentoGridF({ title, content  }: FinancialBentoGridProps) {
   // Create a bento grid item from the provided content
   const items = [
     {
-      title: title,
-      description: "Learn the fundamentals of creating and maintaining a budget.",
-      className: "md:col-span-2",
-      iconType: "clipboard",
-      chapterContent: content
-    },
-    {
-      title: "Saving Strategies",
-      description: "Discover effective ways to save money for your future.",
+      title: "What are Financial Products?",
+      description: "Types of Financial Products",
       className: "md:col-span-1",
       iconType: "fileBroken",
       chapterContent: content
     },
     {
-      title: "Debt Management",
+      title: "Types of Financial Products",
       description: "Learn how to effectively manage and reduce your debt.",
       className: "md:col-span-1",
       iconType: "signature",
       chapterContent: content
     },
     {
-      title: "Investment Fundamentals",
+      title: "Choosing the Right Financial Product",
       description: "Get started with the basics of investing for long-term growth.",
       className: "md:col-span-2",
       iconType: "tableColumn",
@@ -78,9 +71,9 @@ export function FinancialBentoGridSt({ title, content }: FinancialBentoGridProps
           description={item.description}
           header={
 <ExpandableCard
-        title={advancedInvestmentStrategiesContent.title}
-        description={advancedInvestmentStrategiesContent.description}
-        content={advancedInvestmentStrategiesContent}
+        title={financialProductsContent.title}
+        description={financialProductsContent.description}
+        content={financialProductsContent}
         icon={<IconClipboardCopy className="h-6 w-6 text-neutral-500" />}
       />
           }
@@ -92,4 +85,4 @@ export function FinancialBentoGridSt({ title, content }: FinancialBentoGridProps
   );
 }
 
-export default FinancialBentoGridSt;
+export default FinancialBentoGridF;

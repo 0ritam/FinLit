@@ -20,21 +20,22 @@ import {
   riskPracticeQuiz,
 } from "@/data/investing/risk";
 import {
-  retireBasicsContent,
-  retireBasicsQuiz,
-  retirePracticeQuiz
-} from "@/data/investing/retire";
-import {
-  stockBasicsContent,
-  stockMarketPracticeQuiz,
-  stockMarketQuiz
+  advancedInvestmentStrategiesContent,
+  advancedInvestmentStrategiesQuiz,
+  advancedInvestmentStrategiesPracticeQuiz
 } from "@/data/investing/stock";
+import {
+  indianFinancialMarketContent,
+  indianFinancialMarketQuiz,
+  indianFinancialMarketPracticeQuiz
+} from "@/data/investing/indianMarket"
 
 import { Routes, Route } from "react-router-dom";
 import {FinancialBentoGridI} from "@/components/learning/InvestContent/BasicInt";
 import {FinancialBentoGridRi} from "@/components/learning/InvestContent/Risk";
-import {FinancialBentoGridRe} from "@/components/learning/InvestContent/Retire";
 import {FinancialBentoGridSt} from "@/components/learning/InvestContent/Stock";
+import FinancialBentoGridF from "@/components/learning/InvestContent/Fianancial";
+import FinancialBentoGridIM from "@/components/learning/InvestContent/IndianMarket";
 
 
 const chapters = [
@@ -56,12 +57,12 @@ const chapters = [
   {
     title: "Indian Financial Market",
     description: "Explore the Indian financial market landscape and its regulatory environment.",
-    path: "/investing/market-landscape",
+    path: "/investing/market",
   },
   {
     title: "Advanced Investment Strategies",
     description: "Develop skills for managing investments and maximizing returns.",
-    path: "/investing/advanced-strategies",
+    path: "/investing/stocks",
   }
 ];
 
@@ -236,7 +237,7 @@ const Investing = () => {
         path="financial-products"
         element={<ChapterLayout chapterTitle="Financial Products" />}
       >
-        <Route path="content" element={<FinancialBentoGridI title="Financial Products" content={financialProductsContent} />} />
+        <Route path="content" element={<FinancialBentoGridF title="Financial Products" content={financialProductsContent} />} />
         <Route
           path="basic-quiz"
           element={
@@ -259,44 +260,46 @@ const Investing = () => {
         />
       </Route>
 
+      <Route
+        path="market"
+        element={<ChapterLayout chapterTitle="Financial Products" />}
+      >
+        <Route path="content" element={<FinancialBentoGridIM title="Financial Products" content={indianFinancialMarketContent} />} />
         <Route
-          path="retirement"
-          element={<ChapterLayout chapterTitle="Retiremennt Planning" />}
-        >
-          <Route path="content" element={<FinancialBentoGridRe title="Retiremennt Planning" content={retireBasicsContent} />} />
-          <Route
-            path="basic-quiz"
-            element={
-              <ChapterQuiz
-                title="Basic Concepts Quiz"
-                questions={retireBasicsQuiz}
-                isBasic={true}
-              />
-            }
-          />
-          <Route
-            path="practice-quiz"
-            element={
-              <ChapterQuiz
-                title="Practice Scenarios"
-                questions={retirePracticeQuiz}
-                isBasic={false}
-              />
-            }
-          />
-        </Route>
+          path="basic-quiz"
+          element={
+            <ChapterQuiz
+              title="Basic Concepts Quiz"
+              questions={indianFinancialMarketQuiz}
+              isBasic={true}
+            />
+          }
+        />
+        <Route
+          path="practice-quiz"
+          element={
+            <ChapterQuiz
+              title="Practice Scenarios"
+              questions={indianFinancialMarketPracticeQuiz}
+              isBasic={false}
+            />
+          }
+        />
+      </Route>
+
+  
 
         <Route
           path="stocks"
           element={<ChapterLayout chapterTitle="Stock Market Basics" />}
         >
-          <Route path="content" element={<FinancialBentoGridSt title="Stock Market Basics" content={stockBasicsContent} />} />
+          <Route path="content" element={<FinancialBentoGridSt title="Stock Market Basics" content={advancedInvestmentStrategiesContent} />} />
           <Route
             path="basic-quiz"
             element={
               <ChapterQuiz
                 title="Basic Concepts Quiz"
-                questions={stockMarketQuiz}
+                questions={advancedInvestmentStrategiesQuiz}
                 isBasic={true}
               />
             }
@@ -306,7 +309,7 @@ const Investing = () => {
             element={
               <ChapterQuiz
                 title="Practice Scenarios"
-                questions={stockMarketPracticeQuiz}
+                questions={advancedInvestmentStrategiesPracticeQuiz}
                 isBasic={false}
               />
             }
