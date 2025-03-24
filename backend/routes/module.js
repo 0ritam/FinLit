@@ -1,11 +1,10 @@
 const express = require('express');
 const { Module } = require('../db');
-const authMiddleware = require('../middleware');
-
+const {requireAuth} = require('@clerk/express')
 const moduleRoute = express.Router();
 
 
-moduleRoute.post("/add", authMiddleware, async (req, res) => {
+moduleRoute.post("/add", requireAuth(), async (req, res) => {
   try {
     const { name, description } = req.body;
     const newModule = await Module.create({ name, description });

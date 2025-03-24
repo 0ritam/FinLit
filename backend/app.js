@@ -49,6 +49,7 @@ app.post(
           clerkUserId: id,
           firstName: attributes.first_name,
           lastName: attributes.last_name,
+          attendance : []
         });
 
         await newUser.save();

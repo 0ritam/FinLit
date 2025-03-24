@@ -2,7 +2,7 @@ import ContentHeader from "@/components/landing/ContentHeader";
 
 import '../components/landing/Dashboard.css';
 import { useEffect, useState } from 'react';
-
+import { useAuth } from '@clerk/clerk-react';
 import Header from "@/components/landing/Header";
 // Add additional inline styles to preserve your CSS structure while adding dark theme
 const additionalStyles = `
@@ -90,6 +90,7 @@ const additionalStyles = `
 `;
 
 const Dashboard = () => {
+  const { getToken, isSignedIn, isLoaded } = useAuth();
   const [last30Days, setLast30Days] = useState([]);
   const [today, setToday] = useState("");
   const [presentDays, setPresentDays] = useState(new Set()); // Store present days from API
@@ -112,11 +113,15 @@ const Dashboard = () => {
 
     // Fetch attendance and user data from API
     const fetchUserData = async () => {
+
+      const token = await getToken();
+
+
       try {
-        const response = await fetch("http://localhost:3000/v1/user/attendance", {
+        const response = await fetch("http://localhost:5000/v1/user/attendance", {
           method: "GET",
           headers: {
-            // "Authorization": `Bearer ${localStorage.getItem("token")}`, // Uncomment if using authentication
+             "Authorization": `Bearer ${token}`, // Uncomment if using authentication
             "Content-Type": "application/json"
           }
         });
