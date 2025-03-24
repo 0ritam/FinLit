@@ -1,9 +1,8 @@
 import ContentHeader from "@/components/landing/ContentHeader";
-
 import '../components/landing/Dashboard.css';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@clerk/clerk-react';
-import Header from "@/components/landing/Header";
+
 // Add additional inline styles to preserve your CSS structure while adding dark theme
 const additionalStyles = `
   .intro {
@@ -90,16 +89,15 @@ const additionalStyles = `
 `;
 
 const Dashboard = () => {
-  const { getToken, isSignedIn, isLoaded } = useAuth();
+  const { getToken } = useAuth();
   const [last30Days, setLast30Days] = useState([]);
   const [today, setToday] = useState("");
-  const [presentDays, setPresentDays] = useState(new Set()); // Store present days from API
-  const [fullname, setFullname] = useState(""); // Store user name
-  const [progressData, setProgressData] = useState([]); // Store module progress
+  const [presentDays, setPresentDays] = useState(new Set());
+  const [fullname, setFullname] = useState("");
 
   useEffect(() => {
     const currentDate = new Date();
-    const todayFormatted = currentDate.toISOString().split('T')[0]; // YYYY-MM-DD
+    const todayFormatted = currentDate.toISOString().split('T')[0];
     setToday(todayFormatted);
 
     // Calculate the last 30 days
@@ -113,15 +111,13 @@ const Dashboard = () => {
 
     // Fetch attendance and user data from API
     const fetchUserData = async () => {
-
       const token = await getToken();
-
 
       try {
         const response = await fetch("http://localhost:5000/v1/user/attendance", {
           method: "GET",
           headers: {
-             "Authorization": `Bearer ${token}`, // Uncomment if using authentication
+            "Authorization": `Bearer ${token}`,
             "Content-Type": "application/json"
           }
         });
@@ -135,24 +131,9 @@ const Dashboard = () => {
           const presentDates = new Set(
             (data.attendance || [])
               .filter(record => record.status === "presented")
-              .map(record => record.date.split('T')[0]) // Extract YYYY-MM-DD format
+              .map(record => record.date.split('T')[0])
           );
           setPresentDays(presentDates);
-
-          // Set Progress Data with Default Values
-          setProgressData(
-            (data.progress && data.progress.length > 0)
-              ? data.progress.map(module => ({
-                  module: module.module || "Unknown Module",
-                  progress: module.progress ?? 0 // Default to 0% if null/undefined
-                }))
-              : [
-                  { module: "Budgeting", progress: 0 },
-                  { module: "Investing", progress: 0 },
-                  { module: "Saving", progress: 0 },
-                  { module: "Fraud Prevention", progress: 0 }
-                ]
-          );
         } else {
           console.error("Error fetching user data:", data.msg);
         }
@@ -174,15 +155,14 @@ const Dashboard = () => {
 
   return (
     <>
-      
       <style>{additionalStyles}</style>
       <div className="min-h-screen bg-background">
-      <ContentHeader/>
+        <ContentHeader/>
         <div className='main max-w-6xl min-h-screen bg-background p-5 rounded-xl'>
           <h1 className="intro">Welcome back, {fullname}</h1>
           <div className="mt-4 p-4 border border-gray-700 rounded-2xl bg-gray-800/80 flex flex-col sm:flex-row gap-4">
             
-            {/* Streak Section (Left) */}
+            {/* Streak Section */}
             <div className="flex max-w-md flex-wrap mb-4 streak">
               <div className="w-full mb-2">
                 <h4 className="font-medium mb-2 text-gray-300">{formattedDate}</h4>
@@ -198,42 +178,8 @@ const Dashboard = () => {
                 </div>
               ))}
             </div>
-
-            {/* Total Progress Section (Right) */}
-            <div className="flex flex-col justify-start w-full">
-              <h1 className="intro mb-4">Total Progress</h1>
-
-              {/* Progress Bars for Modules */}
-              <div className="flex flex-col gap-6">
-                {progressData.map((module, index) => (
-                  <div key={index} className="w-full">
-                    <label className="block text-sm font-medium text-gray-300 mb-2">{module.module}</label>
-                    
-                    {/* Progress bar container with rounded corners */}
-                    <div className="rounded-lg bg-gray-700 p-2">
-                      <div className="flex mb-2 items-center justify-between">
-                        <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-teal-300 bg-teal-900">
-                            {module.progress}%
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Progress bar with increased height and glow effect */}
-                      <div className="w-full bg-gray-700 rounded-full h-4">
-                        <div
-                          className="bg-teal-500 h-4 rounded-full shadow-lg shadow-teal-500/30"
-                          style={{ width: `${module.progress}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
-        
       </div>
     </>
   );

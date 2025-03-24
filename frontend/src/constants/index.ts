@@ -38,16 +38,13 @@ import {
   blog1,
   blog2,
   blog3,
-  avatar1,
-  avatar2,
-  avatar3,
 } from '@/assets';
 
 // Header
 export const navMenu: MenuItem[] = [
   {
-    href: '/products',
-    label: 'Products',
+    href: '/features',
+    label: 'Features',
     submenu: [
       {
         href: '#',
@@ -87,10 +84,10 @@ export const navMenu: MenuItem[] = [
       },
     ],
   },
-  {
-    href: '/features',
-    label: 'Features',
-  },
+  // {
+  //   href: '/features',
+  //   label: 'Features',
+  // },
   {
     href: '/docs',
     label: 'Docs',
