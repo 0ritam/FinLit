@@ -127,7 +127,7 @@ export const navMenu: MenuItem[] = [
 // Hero
 export const heroData = {
   sectionSubtitle: 'All in one Finance Hub',
-  sectionTitle: 'The finance of Youth ',
+  sectionTitle: 'The finance for Youth ',
   decoTitle: 'FinLit',
   sectionText:
     'Next-gen finance Knowledge: Gain valuable insights of finance and drive data-informed decision-making with our revolutionary platform.',
