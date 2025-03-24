@@ -1,0 +1,25 @@
+const chapters = [
+  {
+    title: "Introduction to Budgeting",
+    description: "Learn the fundamentals of budgeting and its importance in financial planning.",
+    path: "/budgeting/introduction",
+  },
+  {
+    title: "Types of Budgeting Methods",
+    description: "Explore different budgeting techniques like 50/30/20, zero-based, and envelope budgeting.",
+    path: "/budgeting/methods",
+  },
+  {
+    title: "Income and Expense Management",
+    description: "Understand how to track income and expenses for effective financial control.",
+    path: "/budgeting/income-expense",
+  },
+  {
+    title: "Creating a Personal Budget",
+    description: "Step-by-step guide to building and maintaining a personal budget.",
+    path: "/budgeting/personal-budget",
+  }
+];
+
+
+

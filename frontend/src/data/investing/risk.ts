@@ -1,165 +1,126 @@
 export const riskBasicsContent = {
-    title: "Fraud Recognition - Learn How to Recognize Frauds",
-    description: "Understanding and identifying fraudulent activities can help protect your finances and personal information. Learn key fraud patterns and how to avoid them.",
-    sections: [
-      {
-        heading: "What is Fraud Recognition?",
-        paragraphs: [
-          "Fraud recognition involves identifying deceptive activities that aim to steal money or sensitive information...",
-          "By learning to recognize fraud patterns, individuals and businesses can take proactive measures to protect themselves..."
-        ]
-      },
-      {
-        heading: "Common Signs of Fraud",
-        paragraphs: [
-          "Fraudulent activities often involve urgent requests, unrealistic promises, and attempts to obtain personal details...",
-          "Being aware of these red flags can help prevent financial losses..."
-        ]
-      },
-      {
-        heading: "How to Verify Legitimacy?",
-        paragraphs: [
-          "Always verify the source of emails, calls, and messages before taking action...",
-          "Look for official communication methods and avoid clicking on suspicious links..."
-        ]
-      },
-      {
-        heading: "Steps to Take When You Detect Fraud",
-        paragraphs: [
-          "If you suspect fraud, report it to the relevant authorities immediately...",
-          "Monitor your financial statements and secure your accounts to prevent further damage..."
-        ]
-      }
-    ]
+  title: "Risk and Return - Balancing Profit and Security",
+  description: "Learn about different types of risks, the relationship between risk and return, and strategies to manage investment risks effectively.",
+  sections: [
+    {
+      heading: "What is Investment Risk?",
+      paragraphs: [
+        "Investment risk refers to the possibility of losing money on an investment.",
+        "There are various types of risks, including market risk, credit risk, and inflation risk."
+      ]
+    },
+    {
+      heading: "Types of Investment Risks",
+      paragraphs: [
+        "Systematic risk affects the entire market, while unsystematic risk is specific to a company or sector.",
+        "Market volatility, economic factors, and geopolitical events impact investment risk."
+      ]
+    },
+    {
+      heading: "Risk vs. Return Relationship",
+      paragraphs: [
+        "Higher risks are generally associated with higher potential returns.",
+        "Understanding the risk-reward tradeoff is crucial for making informed investment decisions."
+      ]
+    },
+    {
+      heading: "Risk Management Strategies",
+      paragraphs: [
+        "Diversification, asset allocation, and hedging are effective ways to manage risk.",
+        "Investors should assess their risk tolerance before making investment choices."
+      ]
+    }
+  ]
   };
   
   export const riskBasicsQuiz = [
     {
-      question: "What is the primary goal of investing?",
+      question: "What does investment risk refer to?",
       options: [
-        "To save money",
-        "To generate an income or profit",
-        "To spend money",
-        "To track expenses"
+        "The guarantee of profit",
+        "The possibility of losing money",
+        "A fixed return rate",
+        "The cost of investing"
       ],
-      answer: "To generate an income or profit"
+      answer: "The possibility of losing money"
     },
     {
-      question: "What are some types of investments?",
+      question: "Which of the following is an example of systematic risk?",
       options: [
-        "Stocks",
-        "Bonds",
-        "Mutual funds",
-        "All of the above"
+        "A company going bankrupt",
+        "An industry-specific decline",
+        "A global financial crisis",
+        "A change in company leadership"
       ],
-      answer: "All of the above"
+      answer: "A global financial crisis"
     },
     {
-      question: "What is important to consider before starting to invest?",
+      question: "Which strategy helps reduce investment risk?",
       options: [
-        "Financial goals",
-        "Risk tolerance",
-        "Investment options",
-        "All of the above"
+        "Investing all money in one stock",
+        "Ignoring market trends",
+        "Diversification",
+        "Avoiding investments"
       ],
-      answer: "All of the above"
+      answer: "Diversification"
     },
     {
-      question: "Which of the following is considered a high-risk investment?",
+      question: "Which risk is unique to a specific company or industry?",
       options: [
-        "Government bonds",
-        "Savings account",
-        "Penny stocks",
-        "Fixed deposits"
+        "Market risk",
+        "Systematic risk",
+        "Unsystematic risk",
+        "Inflation risk"
       ],
-      answer: "Penny stocks"
+      answer: "Unsystematic risk"
     },
     {
-      question: "Why is diversification important in investing?",
+      question: "What is the main goal of risk management in investing?",
       options: [
-        "It eliminates all risks",
-        "It ensures higher returns",
-        "It spreads risk across different assets",
-        "It increases investment complexity"
+        "To eliminate all risks",
+        "To maximize potential losses",
+        "To minimize losses while optimizing returns",
+        "To ignore market changes"
       ],
-      answer: "It spreads risk across different assets"
-    },
-    {
-      question: "What does ROI stand for in investing?",
-      options: [
-        "Return on Investment",
-        "Rate of Inflation",
-        "Return of Income",
-        "Risk of Investment"
-      ],
-      answer: "Return on Investment"
-    },
-    {
-      question: "What is compounding in investing?",
-      options: [
-        "Earning returns on both principal and previously earned interest",
-        "A method of avoiding risk",
-        "A short-term investment strategy",
-        "A way to decrease tax liabilities"
-      ],
-      answer: "Earning returns on both principal and previously earned interest"
-    },
-    {
-      question: "Which type of investment typically provides the highest long-term returns?",
-      options: [
-        "Savings accounts",
-        "Bonds",
-        "Stocks",
-        "Certificates of deposit"
-      ],
-      answer: "Stocks"
-    },
-    {
-      question: "What is a stock dividend?",
-      options: [
-        "A form of interest on bonds",
-        "A portion of company earnings paid to shareholders",
-        "A penalty for selling stocks early",
-        "A type of stock market index"
-      ],
-      answer: "A portion of company earnings paid to shareholders"
-    },
-    {
-      question: "What is a mutual fund?",
-      options: [
-        "A single company stock",
-        "A diversified investment managed by professionals",
-        "A government savings bond",
-        "A real estate investment trust"
-      ],
-      answer: "A diversified investment managed by professionals"
-    }
+      answer: "To minimize losses while optimizing returns"
+    }  
   ];
   
   export const riskPracticeQuiz = [
     {
-      question: "If you invest $1000 with an annual return of 7%, how much will you have after 1 year (excluding fees and taxes)?",
-      options: ["$1,070", "$1,700", "$1,007", "$1,700"],
+      question: "If an investment of ₹50,000 earns a 10% return annually, what will it be worth after 1 year?",
+      options: ["₹55,000", "₹50,500", "₹52,500", "₹51,000"],
       correctAnswer: 0,
-      explanation: "$1000 × 1.07 = $1,070. This represents a 7% increase on the initial investment."
+      explanation: "₹50,000 × 1.10 = ₹55,000. A 10% return increases the investment value."
     },
     {
-      question: "If an investment has a 10% annual return, how much will it double in value? (Using the Rule of 72)",
-      options: ["7.2 years", "10 years", "12 years", "20 years"],
+      question: "A stock falls from ₹800 to ₹600. What is the percentage loss?",
+      options: ["25%", "30%", "20%", "15%"],
       correctAnswer: 0,
-      explanation: "Using the Rule of 72, 72 ÷ 10 = 7.2 years to double."
+      explanation: "(800-600)/800 × 100 = 25% loss."
     },
     {
-      question: "What is the main goal of risk management in investing?",
-      options: ["Maximizing returns at all costs", "Avoiding all risks", "Minimizing potential losses", "Investing only in safe assets"],
+      question: "You invest ₹20,000 in a stock. If the stock rises by 12%, how much is your investment worth now?",
+      options: ["₹22,400", "₹24,000", "₹21,200", "₹23,000"],
+      correctAnswer: 0,
+      explanation: "₹20,000 × 1.12 = ₹22,400. A 12% gain increases the investment value."
+    },
+    {
+      question: "If a bond has a yield of 7% and you invest ₹30,000, how much will you earn in a year?",
+      options: ["₹2,100", "₹3,000", "₹2,500", "₹3,100"],
+      correctAnswer: 0,
+      explanation: "₹30,000 × 7% = ₹2,100."
+    },
+    {
+      question: "An investor diversifies their portfolio by holding stocks, bonds, and real estate. What is the benefit of this strategy?",
+      options: [
+        "It eliminates all risks",
+        "It maximizes investment losses",
+        "It reduces overall risk by spreading investments",
+        "It guarantees higher returns"
+      ],
       correctAnswer: 2,
-      explanation: "Risk management aims to minimize potential losses while balancing return expectations."
-    },
-    {
-      question: "What is a bear market?",
-      options: ["A market experiencing rising stock prices", "A market experiencing declining stock prices", "A market with no movement", "A term used for bonds"],
-      correctAnswer: 1,
-      explanation: "A bear market refers to a period when stock prices are falling, usually by 20% or more."
+      explanation: "Diversification spreads risk across multiple asset classes to minimize potential losses."
     }
   ];
   

@@ -10,6 +10,11 @@ import {
   investingPracticeQuiz,
 } from "@/data/investing/basics";
 import {
+ financialProductsContent,
+  financialProductsQuiz,
+  financialProductsPracticeQuiz,
+} from "@/data/investing/financialProducts";
+import {
   riskBasicsContent,
   riskBasicsQuiz,
   riskPracticeQuiz,
@@ -34,25 +39,30 @@ import {FinancialBentoGridSt} from "@/components/learning/InvestContent/Stock";
 
 const chapters = [
   {
-    title: "Investment Basics",
-    description: "Learn the fundamentals of investing and market principles",
+    title: "Introduction to Investing",
+    description: "Understand what investing is and why it is essential for wealth creation.",
     path: "/investing/basicsin",
   },
   {
-    title: "Stock Market",
-    description: "Understanding how to invest in stocks and equity markets",
-    path: "/investing/stocks",
-  },
-  {
-    title: "Risk Management",
-    description: "Strategies to assess and manage investment risks effectively",
+    title: "Risk and Return",
+    description: "Learn about different types of risks, returns, and how to manage them.",
     path: "/investing/risk",
   },
   {
-    title: "Retirement Planning",
-    description: "Plan your long-term investment strategy for retirement",
-    path: "/investing/retirement",
+    title: "Financial Products",
+    description: "Understand various financial products available in the market.",
+    path: "/investing/financial-products",
   },
+  {
+    title: "Indian Financial Market",
+    description: "Explore the Indian financial market landscape and its regulatory environment.",
+    path: "/investing/market-landscape",
+  },
+  {
+    title: "Advanced Investment Strategies",
+    description: "Develop skills for managing investments and maximizing returns.",
+    path: "/investing/advanced-strategies",
+  }
 ];
 
 const customStyles = {
@@ -76,6 +86,7 @@ const customStyles = {
 };
 
 const Investing = () => {
+  console.log(financialProductsContent)
   return (
     <Routes>
       <Route
@@ -165,6 +176,7 @@ const Investing = () => {
         }
       />
 
+  
       <Route
         path="basicsin"
         element={<ChapterLayout chapterTitle="Investment Basics" />}
@@ -192,6 +204,7 @@ const Investing = () => {
         />
       </Route>
        
+      
       <Route
           path="risk"
           element={<ChapterLayout chapterTitle="Risk Management" />}
@@ -218,6 +231,33 @@ const Investing = () => {
             }
           />
         </Route>
+
+        <Route
+        path="financial-products"
+        element={<ChapterLayout chapterTitle="Financial Products" />}
+      >
+        <Route path="content" element={<FinancialBentoGridI title="Financial Products" content={financialProductsContent} />} />
+        <Route
+          path="basic-quiz"
+          element={
+            <ChapterQuiz
+              title="Basic Concepts Quiz"
+              questions={financialProductsQuiz}
+              isBasic={true}
+            />
+          }
+        />
+        <Route
+          path="practice-quiz"
+          element={
+            <ChapterQuiz
+              title="Practice Scenarios"
+              questions={financialProductsPracticeQuiz}
+              isBasic={false}
+            />
+          }
+        />
+      </Route>
 
         <Route
           path="retirement"
@@ -274,6 +314,7 @@ const Investing = () => {
         </Route>
     </Routes>
   );
+  
 };
 
 export default Investing;
