@@ -3,7 +3,6 @@ import '../components/landing/Dashboard.css';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@clerk/clerk-react';
 
-// Add additional inline styles to preserve your CSS structure while adding dark theme
 const additionalStyles = `
   .intro {
     font-weight: 700;
@@ -15,7 +14,8 @@ const additionalStyles = `
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
+    margin-bottom: 25%;
+    position: realtive;
     background-color: #1f2937;
     box-shadow: 0 0 40px rgba(79, 70, 229, 0.2);
   }
